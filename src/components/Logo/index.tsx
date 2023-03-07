@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { View, Image, Text } from "react-native";
+import React from "react";
+import { Image } from "react-native";
 import { styles } from "./styles";
 
-export function logo() {
+export function Logo() {
     const imagem = require("../../assets/logo.png")
 
     return(
