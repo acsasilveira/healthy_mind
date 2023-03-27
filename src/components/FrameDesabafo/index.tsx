@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import { View, Text } from "react-native";
 import { styles } from "./styles";
 
 export interface IFrame{
@@ -11,8 +11,10 @@ export interface IFrame{
 export function Frame({dataI,desabafoI}: IFrame){
     return(
         <>
-            <Text style={styles.text}>{dataI}</Text>
-            <Text style={styles.text}>{desabafoI}</Text>
+            <View style={styles.quadro}>
+                <Text style={styles.text}>{dataI}</Text>
+                <Text style={styles.text}>{desabafoI}</Text>
+            </View>
         </>
     )
 }
