@@ -1,7 +1,18 @@
 import React from "react";
-import { View } from "react-native";
+import { Text } from "react-native";
 import { styles } from "./styles";
 
-export function Frame(){
+export interface IFrame{
+    dataI: string;
+    desabafoI: string;
+}
 
+
+export function Frame({dataI,desabafoI}: IFrame){
+    return(
+        <>
+            <Text style={styles.text}>{dataI}</Text>
+            <Text style={styles.text}>{desabafoI}</Text>
+        </>
+    )
 }

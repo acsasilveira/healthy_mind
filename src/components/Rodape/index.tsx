@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Image } from "react-native";
+import { ButtonSlider } from "../ButtonSlider";
 import { styles } from "./styles";
 
 export function Rodape(){
@@ -8,9 +9,15 @@ export function Rodape(){
     const estresseIcon = require("../../assets/EstresseIcon.png")
     const desabafoIcon = require("../../assets/DesabafoIcon.png")
     const icones = Array(homeIcon, ansiedadeIcon, estresseIcon, desabafoIcon);
-    for(var i=0; i < 4; i++){
-        return(
-            <Image source={icones[i]} style={styles.imagem} />
-        )
-    }
+    
+    return(
+        <>
+        {icones.map((i)=>(
+            <ButtonSlider>
+            <Image key={i} source={i} style={styles.imagem} />
+            </ButtonSlider>
+        ))}
+        </>
+    )
+    
 }
