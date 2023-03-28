@@ -9,8 +9,6 @@ export interface IBSlider {
 
 export function ButtonSlider({ onPressI, icon }: IBSlider){
     return (
-        <TouchableOpacity style={styles.img} onPress={onPressI}>
-            {icon}
-        </TouchableOpacity>
+        <TouchableOpacity style={styles.img} onPress={onPressI} />
     )
 }

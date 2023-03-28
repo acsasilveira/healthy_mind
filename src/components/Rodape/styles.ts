@@ -7,5 +7,10 @@ export const styles = StyleSheet.create({
         width: 121,
         height: 118,
         backgroundColor: colors.secondary
+    },
+    buttonSlider: {
+        flexDirection: "row",
+        justifyContent: 'center',
+        alignItems: 'flex-end'
     }
 })

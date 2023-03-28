@@ -1,7 +1,11 @@
 import React, { ReactNode } from "react";
-import { Image } from "react-native";
-import { ButtonSlider } from "../ButtonSlider";
+import { Image, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
+
+export interface IBSlider {
+    onPressI: () => void
+    icon: ReactNode
+}
 
 export function Rodape(){
     const homeIcon = require("../../assets/HomePageIcon.png")
@@ -13,9 +17,9 @@ export function Rodape(){
     return(
         <>
         {icones.map((i)=>(
-            <ButtonSlider>
-            <Image key={i} source={i} style={styles.imagem} />
-            </ButtonSlider>
+            <TouchableOpacity style={styles.buttonSlider}>
+                <Image key={i} source={i} style={styles.imagem} />           
+            </TouchableOpacity>
         ))}
         </>
     )

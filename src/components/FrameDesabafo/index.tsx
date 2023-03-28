@@ -11,7 +11,7 @@ export interface IFrame{
 export function Frame({dataI,desabafoI}: IFrame){
     return(
         <>
-            <View style={styles.quadro}>
+            <View style={styles.panel}>
                 <Text style={styles.text}>{dataI}</Text>
                 <Text style={styles.text}>{desabafoI}</Text>
             </View>

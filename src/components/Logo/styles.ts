@@ -3,7 +3,9 @@ import { colors } from "../../styles/colors";
 
 export const styles = StyleSheet.create({
     img: {
-        width: 381,
-        height: 119
+        width: 150,
+        height: 80,
+        flexDirection: "row",
+        justifyContent: "center"
     }
 });
