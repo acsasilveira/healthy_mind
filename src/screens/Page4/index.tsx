@@ -14,9 +14,14 @@ export function Desabafo({setPageI}: IPage) {
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
-            <ComponentTitle titleI="Siga o passo a passo:" />
-            <ComponentFrase fraseI="'Não tente ser sempre forte e perfeito(a)! Seja apenas você mesmo!'" />
-            <View>
+            <form method="post" action="">
+                <label htmlFor="data">Dia: </label>
+                <input type={"text"} name="data" id="data" style={styles.frame} placeholder="20 de março..." />
+                <label htmlFor="desabafo"></label>
+                <input type={"text"} name="desabafo" id="desabafo" style={styles.frame} placeholder="Escreva seu desabafo..." />
+                <button type="submit" style={styles.button}>Enviar</button>
+            </form>
+            <View style={styles.buttonSLider}>
                 <ComponentButtonSlider onPressI={() => setPageI(1)} icon={homeIcon} />
                 <ComponentButtonSlider onPressI={() => setPageI(2)} icon={ansiedadeIcon} />
                 <ComponentButtonSlider onPressI={() => setPageI(3)} icon={estresseIcon} />

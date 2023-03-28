@@ -8,11 +8,12 @@ export const styles = StyleSheet.create({
     panel: {
         flex: 1,
         marginTop: 40,
-        margin: 20,
+        justifyContent: "center",
         borderRadius: 20,
         backgroundColor: colors.white
     },
     buttonSLider: {
-        
+        flexDirection: "row",
+        justifyContent: 'space-around'
     }
 });

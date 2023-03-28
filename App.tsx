@@ -7,7 +7,7 @@ export interface IPage {
 
 export default function App() {
   const [page, setPageI] = useState(1)
-  switch (page) {
+  switch(page) {
     case 1:
       return <ScreenHome setPageI={setPageI} />
       break;
@@ -19,5 +19,9 @@ export default function App() {
       break;
     case 4:
       return <ScreenDesabafo setPageI={setPageI} />
+      break;
+    default:
+      return <ScreenHome setPageI={setPageI} />
+
   }
 }

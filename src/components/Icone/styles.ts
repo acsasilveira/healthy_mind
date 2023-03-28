@@ -4,13 +4,8 @@ import { colors } from "../../styles/colors";
 export const styles = StyleSheet.create({
     imagem: {
         justifyContent: "space-between",
-        width: 121,
-        height: 118,
+        width: 50,
+        height: 50,
         backgroundColor: colors.secondary
-    },
-    buttonSlider: {
-        flexDirection: "row",
-        justifyContent: 'center',
-        alignItems: 'flex-end'
     }
 })

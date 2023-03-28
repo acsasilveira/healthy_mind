@@ -12,13 +12,13 @@ export function Home({setPageI}: IPage) {
     const desabafoIcon = require("../../assets/DesabafoIcon.png")
 
     return(
-        <View style={styles.container}>
+        <View>
             <ComponentLogo></ComponentLogo>
             <ComponentTitle titleI="Desabafos da Semana:" />
-            <View>
+            <View style={styles.panel}>
                 <ComponentFrame dataI="27 de março" desabafoI="Estou meio perdida!"/>
             </View>
-            <View>
+            <View style={styles.buttonSLider}>
                 <ComponentButtonSlider onPressI={() => setPageI(1)} icon={homeIcon} />
                 <ComponentButtonSlider onPressI={() => setPageI(2)} icon={ansiedadeIcon} />
                 <ComponentButtonSlider onPressI={() => setPageI(3)} icon={estresseIcon} />
