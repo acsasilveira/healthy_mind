@@ -3,27 +3,60 @@ import { colors } from '../../styles/colors';
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.primary
+        flex: 1,
+        backgroundColor: colors.primary,
     },
     buttonSLider: {
         flexDirection: "row",
-        justifyContent: 'space-around'
+        justifyContent: "space-between",
+        backgroundColor: colors.secondary,
+        height: 100,
+        alignItems: "center"
     },
-    frame: {
-        flexDirection: "row",
-        justifyContent: "center",
-        marginTop: 30,
-        backgroundColor: colors.secondary
+    panelData: {
+        backgroundColor: colors.secondary,
+        margin: 20,
+        padding: 25
+        
     },
-    caixaDeTexto: {
-        flexDirection: "row",
-        justifyContent: "center",
-        marginTop: 4,
+    panel: {
         backgroundColor: colors.white,
+        margin: 20,
+        marginTop: 10,
+        padding: 25
+        
+    },
+    espaco: {
+        margin: 109.5
+    },
+    img: {
+        width: 80,
+        height: 80,
+        alignItems: "center",
+        justifyContent: "center"
     },
     button: {
-        color: colors.white,
+        alignItems: "center",
+        color: colors.primary,
         backgroundColor: colors.secondary,
-        borderRadius: 15        
+        borderRadius: 15,
+        padding: 10,
+        width: "30%",        
+    },
+    textoDia: {
+        color: colors.primary,
+        fontSize: 20
+    },
+    textoBotao: {
+        color: colors.primary,
+        fontSize: 30
+    },
+    textoCaixa: {
+        color: colors.black,
+        fontSize: 20
+    },
+    lugarBotao: {
+        alignItems: "flex-end",
+        marginRight: 25
     }
 });

@@ -1,6 +1,4 @@
-export { ButtonSlider as ComponentButtonSlider } from  "./ButtonSlider";
 export { Logo as ComponentLogo } from "./Logo";
-export { Rodape as ComponentRodape } from "./Rodape";
-export { Frame as ComponentFrame } from "./FrameDesabafo";
+export { Frame as ComponentFrame } from "./FrameHome";
 export { Title as ComponentTitle } from "./Title";
 export { Frase as ComponentFrase } from "./Frase";

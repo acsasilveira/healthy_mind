@@ -12,7 +12,7 @@ export function Frame({dataI,desabafoI}: IFrame){
     return(
         <>
             <View style={styles.panel}>
-                <Text style={styles.text}>{dataI}</Text>
+                <Text style={styles.textData}>{dataI}</Text>
                 <Text style={styles.text}>{desabafoI}</Text>
             </View>
         </>

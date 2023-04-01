@@ -3,17 +3,23 @@ import { colors } from '../../styles/colors';
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.primary
-    },
-    panel: {
         flex: 1,
-        marginTop: 40,
-        justifyContent: "center",
-        borderRadius: 20,
-        backgroundColor: colors.white
+        backgroundColor: colors.primary,
     },
     buttonSLider: {
         flexDirection: "row",
-        justifyContent: 'space-around'
+        justifyContent: "space-between",
+        backgroundColor: colors.secondary,
+        height: 100,
+        alignItems: "center"
+    },
+    espaco: {
+        margin: 30
+    },
+    img: {
+        width: 80,
+        height: 80,
+        alignItems: "center",
+        justifyContent: "center"
     }
 });

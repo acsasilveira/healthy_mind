@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from 'react';
-import{ ScreenHome, ScreenAnsiedade, ScreenEStresse, ScreenDesabafo } from "./src/screens";
+import{ ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo } from "./src/screens";
 
 export interface IPage {
   setPageI: Dispatch<SetStateAction<number>>
@@ -15,7 +15,7 @@ export default function App() {
       return <ScreenAnsiedade setPageI={setPageI} />
       break;
     case 3: 
-      return <ScreenEStresse setPageI={setPageI} />
+      return <ScreenEstresse setPageI={setPageI} />
       break;
     case 4:
       return <ScreenDesabafo setPageI={setPageI} />

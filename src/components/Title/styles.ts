@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
     text: {
         fontWeight: "bold",
         color: colors.secondary,
-        fontSize: 32
+        fontSize: 35,
+        margin: 10
     }
 
 })
