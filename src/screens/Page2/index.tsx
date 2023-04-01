@@ -8,7 +8,7 @@ import { styles } from './styles';
 
 export function Ansiedade({setPageI}: IPage) {
     const homeIcon = require("../../assets/home.png")
-    const ansiedadeIcon = require("../../assets/ansiedade.png")
+    const ansiedadeIcon = require("../../assets/ansiedadeClick.png")
     const estresseIcon = require("../../assets/estresse.png")
     const desabafoIcon = require("../../assets/desabafo.png")
     

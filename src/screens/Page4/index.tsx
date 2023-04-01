@@ -10,7 +10,7 @@ export function Desabafo({setPageI}: IPage) {
     const homeIcon = require("../../assets/home.png")
     const ansiedadeIcon = require("../../assets/ansiedade.png")
     const estresseIcon = require("../../assets/estresse.png")
-    const desabafoIcon = require("../../assets/desabafo.png")
+    const desabafoIcon = require("../../assets/desabafoClick.png")
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
