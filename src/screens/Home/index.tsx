@@ -1,7 +1,7 @@
 import { View, TouchableOpacity, Image } from "react-native";
 import { IPage } from '../../../App';
 import {
-    ComponentButtonSlider ,ComponentLogo, ComponentFrame, ComponentTitle
+    ComponentLogo, ComponentFrame, ComponentTitle
 } from '../../components';
 import { styles } from './styles';
 
