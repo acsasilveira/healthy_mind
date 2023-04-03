@@ -13,17 +13,12 @@ export const styles = StyleSheet.create({
         height: 100,
         alignItems: "center"
     },
-    panelData: {
-        backgroundColor: colors.secondary,
-        margin: 20,
-        padding: 25
-        
-    },
     panel: {
         backgroundColor: colors.white,
         margin: 20,
         marginTop: 10,
-        padding: 25
+        padding: 10,
+        borderRadius: 5
         
     },
     img: {
@@ -40,10 +35,6 @@ export const styles = StyleSheet.create({
         padding: 10,
         width: "30%"        
     },
-    textoDia: {
-        color: colors.primary,
-        fontSize: 20
-    },
     textoBotao: {
         color: colors.primary,
         fontSize: 20
@@ -57,19 +48,13 @@ export const styles = StyleSheet.create({
         marginRight: 25,
         marginBottom: 15
     },
-    buttonLogin: {
-        alignItems: "center",
-        backgroundColor: colors.white,
-        padding: 10,
-        width: "90%",
-    },
-    textoBotaoLogin: {
+    icon: {
+        fontSize: 28,
         color: colors.secondary,
-        fontSize: 20
+        padding: 5
     },
-    lugarBotaoLogin: {
-        alignItems: "center",
-        marginBottom: 15,
-        marginTop: 20
+    ladinho :{
+        flexDirection: "row",
+        alignItems: "center"
     }
 });

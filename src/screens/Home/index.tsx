@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, TouchableOpacity, Image } from "react-native";
 import { IPage } from '../../../App';
 import {
@@ -21,7 +22,6 @@ export function Home({setPageI}: IPage) {
                 <ComponentFrame dataI="28 de março" desabafoI="Nem mexi no código! Jesus toma conta!"/>
                 <ComponentFrame dataI="31 de março" desabafoI="Foiiii um pouquinho"/>
             </View>
-            <View style={styles.espaco} />
             <View style={styles.buttonSLider}>
                 <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
                     <Image source={homeIcon} />

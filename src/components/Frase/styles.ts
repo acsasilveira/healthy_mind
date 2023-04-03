@@ -4,10 +4,10 @@ import { colors } from "../../styles/colors";
 export const styles = StyleSheet.create({
     text: {
         color: colors.black,
-        fontSize: 50,
+        fontSize: 35,
         textAlign: "center",
         alignItem: "center",
-        marginTop: 25
+        margin: 25
     }
 
 })

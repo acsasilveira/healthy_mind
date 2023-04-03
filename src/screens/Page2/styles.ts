@@ -13,9 +13,6 @@ export const styles = StyleSheet.create({
         height: 100,
         alignItems: "center"
     },
-    espaco: {
-        margin: 133.5
-    },
     img: {
         width: 80,
         height: 80,

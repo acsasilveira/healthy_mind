@@ -4,18 +4,18 @@ import { colors } from "../../styles/colors";
 export const styles = StyleSheet.create({
     panel: {
         backgroundColor: colors.white,
-        margin: 20,
+        margin: 15,
         borderRadius: 20,
-        padding: 10
+        padding: 5
         
     },       
     textData: {
         fontWeight: "bold",
-        fontSize: 25,
-        margin: 10
+        fontSize: 20,
+        margin: 7
     },
     text: {
-        fontSize: 25,
+        fontSize: 15,
         margin: 10
     }
 })

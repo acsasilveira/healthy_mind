@@ -1,3 +1,4 @@
+import React from "react";
 import { View, TouchableOpacity, Image } from "react-native";
 import { IPage } from '../../../App';
 import {
@@ -17,7 +18,6 @@ export function Ansiedade({setPageI}: IPage) {
             <ComponentLogo></ComponentLogo>
             <ComponentTitle titleI="Frase Reguladora do dia:" />
             <ComponentFrase fraseI="'Não tente ser sempre forte e perfeito(a)! Seja apenas você mesmo!'" />
-            <View style={styles.espaco} />
             <View style={styles.buttonSlider}>
                 <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
                     <Image source={homeIcon} />
