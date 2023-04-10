@@ -10,7 +10,7 @@ import { styles } from './styles';
 import { colors } from "../../styles/colors";
 
 
-export function Cadastro({setPageI}: IPage) {
+export function Cadastro() {
     const homeIcon = require("../../assets/home.png")
     const ansiedadeIcon = require("../../assets/ansiedade.png")
     const estresseIcon = require("../../assets/estresse.png")

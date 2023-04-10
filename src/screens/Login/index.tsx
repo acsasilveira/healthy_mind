@@ -3,14 +3,14 @@ import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
 import { IPage } from '../../../App';
-import {
     ComponentLogo, ComponentTitle, ComponentButton
 } from '../../components';
 import { styles } from './styles';
 import { colors } from "../../styles/colors";
+import { LoginTypes } from "../../navigations/login.navigation";
 
 
-export function Login({setPageI}: IPage) {
+export function Login({navigation}:LoginTypes) {
     const homeIcon = require("../../assets/home.png")
     const ansiedadeIcon = require("../../assets/ansiedade.png")
     const estresseIcon = require("../../assets/estresse.png")
@@ -51,7 +51,7 @@ export function Login({setPageI}: IPage) {
             </View>
 
             <View style={styles.linkLugar} /* Link para o cadastrar */>
-                <TouchableOpacity onPress={() => {setPageI(6)}}>
+                <TouchableOpacity onPress={() => {navigation.navigate('Cadastrar')}}>
                     <Text style={styles.text}> Ou crie uma conta... </Text>
                 </TouchableOpacity>
             </View>

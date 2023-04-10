@@ -22,12 +22,6 @@ export default function App() {
     case 4:
       return <ScreenDesabafo setPageI={setPageI} />
       break;
-    case 5:
-      return <ScreenLogin setPageI={setPageI} />
-      break;
-    case 6:
-      return <ScreenCadastro setPageI={setPageI} />
-      break;
     default:
       return <Navigation /> 
 
