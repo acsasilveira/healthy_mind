@@ -3,11 +3,13 @@ import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
 import { IPage } from '../../../App';
-import {
-    ComponentLogo, ComponentTitle, ComponentButton
+import {    ComponentLogo, ComponentTitle, ComponentButton
 } from '../../components';
 import { styles } from './styles';
 import { colors } from "../../styles/colors";
+import { LoginTypes } from "../../navigations/login.navigation";
+
+
 
 
 export function Cadastro() {
@@ -80,7 +82,7 @@ export function Cadastro() {
             </View>
 
             <View style={styles.lugarBotao} /* Botão */>
-                <ComponentButton onPressI={() => {setPageI(5)}} title="Cadastrar-se" type="geral" />
+                <ComponentButton onPressI={() => {navigation.navigate('Login')}} title="Cadastrar-se" type="geral" />
             </View>
             
             <View style={styles.buttonSLider} /* Rodapé */>

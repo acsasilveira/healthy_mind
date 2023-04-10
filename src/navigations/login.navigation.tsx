@@ -11,6 +11,12 @@ type LoginScreenNavigation = StackNavigationProp<LoginStackParamList, 'Login' >
 export type LoginTypes ={
   navigation: LoginScreenNavigation
 }
+
+type CadastroScreenNavigation = StackNavigationProp<LoginStackParamList, 'Cadastrar' >
+export type CadastroTypes ={
+  navigation: CadastroScreenNavigation
+}
+
 const Stack = createStackNavigator();
 
 export function LoginNavigation() {

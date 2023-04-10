@@ -2,7 +2,8 @@ import React from "react";
 import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react-native";
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
-import { IPage } from '../../../App';
+import { IPage } from "../../../App";
+import { 
     ComponentLogo, ComponentTitle, ComponentButton
 } from '../../components';
 import { styles } from './styles';
@@ -57,7 +58,7 @@ export function Login({navigation}:LoginTypes) {
             </View>
 
             <View style={styles.lugarBotao} /* Botão*/>
-                <ComponentButton onPressI={() => {setPageI(1)}} title="Entrar" type="geral" />
+                <ComponentButton onPressI={() => {setPageI(1)} title="Entrar" type="geral" />
             </View>
             
             <View style={styles.buttonSLider} /* Rodapé */>

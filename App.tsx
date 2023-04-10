@@ -7,7 +7,7 @@ export interface IPage {
   setPageI: Dispatch<SetStateAction<number>>
 }
 
-export default function App() {
+export function App() {
   const [page, setPageI] = useState(1)
   switch(page) {
     case 1:
