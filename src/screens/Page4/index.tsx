@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react
 import { TextInput } from "react-native-gesture-handler";
 import { IPage } from '../../../App';
 import {
-    ComponentLogo, 
+    ComponentLogo, ComponentButton
 } from '../../components';
 import { styles } from './styles';
 import { colors } from "../../styles/colors";
@@ -17,7 +17,7 @@ export function Desabafo({setPageI}: IPage) {
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
-            <View style={styles.panelData}>
+            <View style={styles.panelData} /* Data */>
                 <Text style={styles.textoDia}>Dia: </Text>
                     <TextInput 
                         placeholder="03 de abril..."
@@ -27,7 +27,8 @@ export function Desabafo({setPageI}: IPage) {
                         style={styles.textoDia}
                     />
             </View>
-            <View style={styles.panel}>
+
+            <View style={styles.panel} /* Caixa de Texto */>
                 <TextInput 
                     placeholder="Escreva seu desabafo..."
                     placeholderTextColor={colors.cinza}
@@ -36,17 +37,16 @@ export function Desabafo({setPageI}: IPage) {
                     style={styles.textoCaixa}
                 />
             </View>
-            <View style={styles.lugarBotao}>
-                <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.button}>
-                    <Text style={styles.textoBotao}>Enviar</Text>
-                </TouchableOpacity>
+
+            <View style={styles.lugarBotao} /* Botão */>
+                <ComponentButton onPressI={() => {setPageI(1)}} title="Enviar" type="geral" />
             </View>
-            <View style={styles.lugarBotaoLogin}> 
-                <TouchableOpacity onPress={() => {setPageI(5)}} style={styles.buttonLogin}>
-                    <Text style={styles.textoBotaoLogin}>Entrar</Text>
-                </TouchableOpacity>
+
+            <View style={styles.lugarBotaoLogin} /* Botão para fazer login */> 
+                <ComponentButton onPressI={() => {setPageI(5)}} title="Entrar" type="login" />
             </View>
-            <View style={styles.buttonSLider}>
+
+            <View style={styles.buttonSLider} /* Rodapé */>
                 <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
                     <Image source={homeIcon} />
                 </TouchableOpacity>

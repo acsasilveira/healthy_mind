@@ -1,7 +1,7 @@
-import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 import { Dispatch, SetStateAction, useState } from 'react';
-import{ ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLogin } from "./src/screens";
-import { Navigation } from "./src/navigations";
+import{ ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLogin, ScreenCadastro } from "./src/screens";
+import { Navigation } from "./src/navigations"
 
 export interface IPage {
   setPageI: Dispatch<SetStateAction<number>>
@@ -25,8 +25,11 @@ export default function App() {
     case 5:
       return <ScreenLogin setPageI={setPageI} />
       break;
+    case 6:
+      return <ScreenCadastro setPageI={setPageI} />
+      break;
     default:
-      return <Navigation />
+      return <Navigation /> 
 
   }
 }

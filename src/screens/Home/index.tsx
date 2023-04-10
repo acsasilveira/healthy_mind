@@ -17,12 +17,13 @@ export function Home({setPageI}: IPage) {
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
             <ComponentTitle titleI="Desabafos da Semana:" />
-            <View>
+            <View /* Frames */>
                 <ComponentFrame dataI="27 de março" desabafoI="Estou meio perdida!"/>
                 <ComponentFrame dataI="28 de março" desabafoI="Nem mexi no código! Jesus toma conta!"/>
                 <ComponentFrame dataI="31 de março" desabafoI="Foiiii um pouquinho"/>
             </View>
-            <View style={styles.buttonSLider}>
+
+            <View style={styles.buttonSLider} /* Rodapé */>
                 <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
                     <Image source={homeIcon} />
                 </TouchableOpacity>

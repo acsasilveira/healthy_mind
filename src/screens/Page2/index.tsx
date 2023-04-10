@@ -18,7 +18,7 @@ export function Ansiedade({setPageI}: IPage) {
             <ComponentLogo></ComponentLogo>
             <ComponentTitle titleI="Frase Reguladora do dia:" />
             <ComponentFrase fraseI="'Não tente ser sempre forte e perfeito(a)! Seja apenas você mesmo!'" />
-            <View style={styles.buttonSlider}>
+            <View style={styles.buttonSlider} /* Rodapé */>
                 <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
                     <Image source={homeIcon} />
                 </TouchableOpacity>

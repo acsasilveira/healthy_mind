@@ -10,7 +10,7 @@ import { styles } from './styles';
 import { colors } from "../../styles/colors";
 
 
-export function Login({setPageI}: IPage) {
+export function Cadastro({setPageI}: IPage) {
     const homeIcon = require("../../assets/home.png")
     const ansiedadeIcon = require("../../assets/ansiedade.png")
     const estresseIcon = require("../../assets/estresse.png")
@@ -19,7 +19,21 @@ export function Login({setPageI}: IPage) {
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
-            <ComponentTitle titleI="Login" />
+            <ComponentTitle titleI="Cadastro" /> 
+            <View style={styles.panel} /* Nome */>
+                <KeyboardAvoidingView>
+                        <View style={styles.ladinho}>
+                            <Ionicons name="person-circle" style={styles.icon} />
+                            <TextInput 
+                            placeholder="Nome"
+                            placeholderTextColor={colors.cinza}
+                            autoCapitalize="none"
+                            style={styles.textoCaixa}
+                            />
+                        </View>
+                </KeyboardAvoidingView>
+            </View>
+
             <View style={styles.panel} /* Email */>
                 <KeyboardAvoidingView>
                     <View style={styles.ladinho}>
@@ -50,14 +64,23 @@ export function Login({setPageI}: IPage) {
                 </KeyboardAvoidingView>
             </View>
 
-            <View style={styles.linkLugar} /* Link para o cadastrar */>
-                <TouchableOpacity onPress={() => {setPageI(6)}}>
-                    <Text style={styles.text}> Ou crie uma conta... </Text>
-                </TouchableOpacity>
+            <View style={styles.panel} /* Confirmação de Senha */>
+                <KeyboardAvoidingView>
+                    <View style={styles.ladinho}>
+                        <Ionicons  name="md-key-outline" size={24} style={styles.icon} />
+                        <TextInput 
+                        placeholder="Confirme sua senha"
+                        placeholderTextColor={colors.cinza}
+                        secureTextEntry={true}
+                        autoCapitalize="none"
+                        style={styles.textoCaixa}
+                        />
+                    </View>
+                </KeyboardAvoidingView>
             </View>
 
-            <View style={styles.lugarBotao} /* Botão*/>
-                <ComponentButton onPressI={() => {setPageI(1)}} title="Entrar" type="geral" />
+            <View style={styles.lugarBotao} /* Botão */>
+                <ComponentButton onPressI={() => {setPageI(5)}} title="Cadastrar-se" type="geral" />
             </View>
             
             <View style={styles.buttonSLider} /* Rodapé */>

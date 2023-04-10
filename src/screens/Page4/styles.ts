@@ -61,7 +61,7 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: colors.white,
         padding: 10,
-        width: "90%",
+        width: "90%"
     },
     textoBotaoLogin: {
         color: colors.secondary,

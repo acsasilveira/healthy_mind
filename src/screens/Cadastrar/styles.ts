@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 import { colors } from '../../styles/colors';
 
 export const styles = StyleSheet.create({
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.secondary,
         borderRadius: 15,
         padding: 10,
-        width: "30%"        
+        width: "40%"        
     },
     textoBotao: {
         color: colors.primary,
@@ -56,13 +56,5 @@ export const styles = StyleSheet.create({
     ladinho :{
         flexDirection: "row",
         alignItems: "center"
-    },
-    text: {
-        color: colors.secondary,
-        fontSize: 20
-    },
-    linkLugar: {
-        alignItems: "center",
-        marginBottom: 10
     }
 });

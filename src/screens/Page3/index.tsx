@@ -19,15 +19,15 @@ export function Estresse({setPageI}: IPage) {
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
             <ComponentTitle titleI="Siga o passo a passo:" />
-            <View>
+            <View /* Tópicos */ >
                 <Text style={styles.texto}>1. Respire fundo</Text>
                 <Text style={styles.texto}>2. Conte até 37</Text>
                 <Text style={styles.texto}>3. Estale os dedos</Text>
                 <Text style={styles.texto}>4. Relaxe o pescoço</Text>
                 <Text style={styles.texto}>5. Mude o ponto de vista</Text>
             </View>
-            <View style={styles.espaco} />
-            <View style={styles.buttonSLider}>
+            <View style={styles.espaco} /* Espaço *//>
+            <View style={styles.buttonSLider} /* Rodapé */>
                 <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
                     <Image source={homeIcon} />
                 </TouchableOpacity>
