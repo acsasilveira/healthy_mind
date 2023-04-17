@@ -1,13 +1,12 @@
 import 'react-native-gesture-handler';
 import { Dispatch, SetStateAction, useState } from 'react';
-import{ ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLogin, ScreenCadastro } from "./src/screens";
-import { Navigation } from "./src/navigations"
+import{ ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenNavigation } from "./src/screens";
 
 export interface IPage {
   setPageI: Dispatch<SetStateAction<number>>
 }
 
-export function App() {
+export default function App() {
   const [page, setPageI] = useState(1)
   switch(page) {
     case 1:
@@ -23,7 +22,7 @@ export function App() {
       return <ScreenDesabafo setPageI={setPageI} />
       break;
     default:
-      return <Navigation /> 
+      return <ScreenNavigation setPageI={setPageI}/> 
 
   }
 }

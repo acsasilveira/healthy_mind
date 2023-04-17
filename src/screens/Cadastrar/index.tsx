@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react-native";
+import { View, TouchableOpacity, Image, KeyboardAvoidingView } from "react-native";
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
 import { IPage } from '../../../App';
@@ -10,17 +10,10 @@ import { colors } from "../../styles/colors";
 import { LoginTypes } from "../../navigations/login.navigation";
 
 
-
-
-export function Cadastro() {
-    const homeIcon = require("../../assets/home.png")
-    const ansiedadeIcon = require("../../assets/ansiedade.png")
-    const estresseIcon = require("../../assets/estresse.png")
-    const desabafoIcon = require("../../assets/desabafoClick.png")
+export function Cadastro({navigation}:LoginTypes) {
 
     return(
         <View style={styles.container}>
-            <ComponentLogo></ComponentLogo>
             <ComponentTitle titleI="Cadastro" /> 
             <View style={styles.panel} /* Nome */>
                 <KeyboardAvoidingView>
@@ -82,22 +75,7 @@ export function Cadastro() {
             </View>
 
             <View style={styles.lugarBotao} /* Botão */>
-                <ComponentButton onPressI={() => {navigation.navigate('Login')}} title="Cadastrar-se" type="geral" />
-            </View>
-            
-            <View style={styles.buttonSLider} /* Rodapé */>
-                <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
-                    <Image source={homeIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(2)}} style={styles.img}>
-                    <Image source={ansiedadeIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(3)}} style={styles.img}>
-                    <Image source={estresseIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(4)}} style={styles.img}>
-                    <Image source={desabafoIcon} />
-                </TouchableOpacity>
+                <ComponentButton onPressI={() => {navigation.navigate('Login')}} title="Entrar" type="geral" />
             </View>
         </View>
         

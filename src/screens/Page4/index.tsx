@@ -43,7 +43,7 @@ export function Desabafo({setPageI}: IPage) {
             </View>
 
             <View style={styles.lugarBotaoLogin} /* Botão para fazer login */> 
-                <ComponentButton onPressI={() => {setPageI(5)}} title="Entrar" type="login" />
+                <ComponentButton onPressI={() => {setPageI(7)}} title="Entrar" type="login" />
             </View>
 
             <View style={styles.buttonSLider} /* Rodapé */>
