@@ -23,6 +23,18 @@ export const styles = StyleSheet.create({
     textLogin: {
         color: colors.secondary,
         fontSize: 20
+    },
+    buttonVoltar: {
+        backgroundColor: colors.primary,
+        width: "40%",
+    },
+    textVoltar: {
+        color: colors.secondary,
+        fontSize: 20
+    },
+    iconVoltar: {
+        color: colors.secondary,
+        fontSize: 20
     }
 
 })

@@ -3,18 +3,18 @@ import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
 import { 
-    ComponentLogo, ComponentTitle, ComponentButton
+    ComponentLogo, ComponentTitle, ComponentButton,
 } from '../../components';
 import { styles } from './styles';
 import { colors } from "../../styles/colors";
 import { LoginTypes } from "../../navigations/login.navigation";
-import  setPageI  from "../../../App";
 
 
 export function Login({navigation}:LoginTypes) {
 
     return(
         <View style={styles.container}>
+            <ComponentLogo />
             <ComponentTitle titleI="Login" />
             <View style={styles.panel} /* Email */>
                 <KeyboardAvoidingView>
@@ -53,7 +53,7 @@ export function Login({navigation}:LoginTypes) {
             </View>
 
             <View style={styles.lugarBotao} /* Botão */>
-                <ComponentButton onPressI={() => {}} title="Entrar" type="geral" />
+                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="geral" />
             </View>
 
             

@@ -1,18 +1,13 @@
 import React from 'react';
 import { View, TouchableOpacity, Image } from "react-native";
-import { IPage } from '../../../App';
 import {
     ComponentLogo, ComponentFrame, ComponentTitle
 } from '../../components';
 import { styles } from './styles';
+import { TabTypes } from "../../navigations/tab.navigation"
 
 
-export function Home({setPageI}: IPage) {
-    const homeIcon = require("../../assets/homeClick.png")
-    const ansiedadeIcon = require("../../assets/ansiedade.png")
-    const estresseIcon = require("../../assets/estresse.png")
-    const desabafoIcon = require("../../assets/desabafo.png")
-
+export function Home({ navigation }: TabTypes) {
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
@@ -21,21 +16,6 @@ export function Home({setPageI}: IPage) {
                 <ComponentFrame dataI="27 de março" desabafoI="Estou meio perdida!"/>
                 <ComponentFrame dataI="28 de março" desabafoI="Nem mexi no código! Jesus toma conta!"/>
                 <ComponentFrame dataI="31 de março" desabafoI="Foiiii um pouquinho"/>
-            </View>
-
-            <View style={styles.buttonSLider} /* Rodapé */>
-                <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
-                    <Image source={homeIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(2)}} style={styles.img}>
-                    <Image source={ansiedadeIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(3)}} style={styles.img}>
-                    <Image source={estresseIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(4)}} style={styles.img}>
-                    <Image source={desabafoIcon} />
-                </TouchableOpacity>
             </View>
         </View>
         
