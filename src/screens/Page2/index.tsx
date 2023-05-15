@@ -7,7 +7,7 @@ import { styles } from './styles';
 import { TabTypes } from "../../navigations/tab.navigation"
 
 
-export function Ansiedade({ navigation }: TabTypes) {  
+export function Ansiedade({}: TabTypes) {  
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>

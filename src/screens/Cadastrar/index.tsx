@@ -2,7 +2,6 @@ import React from "react";
 import { View, TouchableOpacity, Image, KeyboardAvoidingView } from "react-native";
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
-import { IPage } from '../../../App';
 import {    ComponentLogo, ComponentTitle, ComponentButton
 } from '../../components';
 import { styles } from './styles';

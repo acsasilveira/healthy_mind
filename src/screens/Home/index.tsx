@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Image } from "react-native";
+import { View } from "react-native";
 import {
     ComponentLogo, ComponentFrame, ComponentTitle
 } from '../../components';
@@ -7,7 +7,7 @@ import { styles } from './styles';
 import { TabTypes } from "../../navigations/tab.navigation"
 
 
-export function Home({ navigation }: TabTypes) {
+export function Home({}: TabTypes) {
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>

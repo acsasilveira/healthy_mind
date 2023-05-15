@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
-import { IPage } from '../../../App';
 import {
       ComponentLogo, ComponentTitle
 } from '../../components';
 import { styles } from './styles';
+import { TabTypes } from "../../navigations/tab.navigation"
 
 
 
-export function Estresse({setPageI}: IPage) {
+export function Estresse({}: TabTypes) {
 
     const homeIcon = require("../../assets/home.png")
     const ansiedadeIcon = require("../../assets/ansiedade.png")
@@ -27,20 +27,6 @@ export function Estresse({setPageI}: IPage) {
                 <Text style={styles.texto}>5. Mude o ponto de vista</Text>
             </View>
             <View style={styles.espaco} /* Espaço *//>
-            <View style={styles.buttonSLider} /* Rodapé */>
-                <TouchableOpacity onPress={() => {setPageI(1)}} style={styles.img}>
-                    <Image source={homeIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(2)}} style={styles.img}>
-                    <Image source={ansiedadeIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(3)}} style={styles.img}>
-                    <Image source={estresseIcon} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {setPageI(4)}} style={styles.img}>
-                    <Image source={desabafoIcon} />
-                </TouchableOpacity>
-            </View>
         </View>
         
     );

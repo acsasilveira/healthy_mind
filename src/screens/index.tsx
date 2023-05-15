@@ -4,5 +4,5 @@ export { Estresse as ScreenEstresse } from "./Page3";
 export { Desabafo as ScreenDesabafo } from "./Page4";
 export { Login as ScreenLogin } from "./Login";
 export { Cadastro as ScreenCadastro} from "./Cadastrar";
-export { Page5 as ScreenNavigation} from "./Page5";
+export { SCamera as ScreenCamera } from "./Camera";
 export { Perfil as ScreenPerfil} from "./Perfil";
