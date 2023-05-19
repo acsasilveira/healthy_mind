@@ -26,5 +26,5 @@ export function LoginNavigation() {
       <Stack.Screen name="Tab" component={TabNavigation} />
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
     </Stack.Navigator>
-  );
+  )
 }

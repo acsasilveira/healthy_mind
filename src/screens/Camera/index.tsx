@@ -3,6 +3,10 @@ import { useState, useRef } from 'react';
 import { Button, Text, TouchableOpacity, View, Image } from 'react-native';
 import { styles } from "./styles"
 import { ComponentButton } from "../../components";
+import { MaterialCommunityIcons, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { colors } from '../../styles/colors';
+import { color } from 'react-native-reanimated';
+
 interface IPhoto {
   height: string
   uri: string
@@ -34,8 +38,8 @@ export function SCamera() {
     setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
   }
 
-  async function takePicture(){
-    if(ref.current){
+  async function takePicture() {
+    if (ref.current) {
       const picture = await ref.current.takePictureAsync()
       console.log(picture)
       setPhoto(picture)
@@ -45,13 +49,26 @@ export function SCamera() {
 
   return (
     <View style={styles.container}>
-      <ComponentButton title="Flip" type="geral" onPressI={toggleCameraType} />
-      <Camera style={styles.camera} type={type} ref={ref}>
-      <ComponentButton title="Tirar Foto" type="geral" onPressI={toggleCameraType} />
-      {photo && photo.uri && (
-        <Image source={{uri: photo.uri}} style={styles.img} />
+      {photo && photo.uri ? (
+        <>
+          <Image source={{ uri: photo.uri }} style={styles.img} />
+          <TouchableOpacity onPress={() => setPhoto(undefined)}>
+            <Ionicons name="return-down-back" size={24} color={colors.secondary} />
+          </TouchableOpacity>
+        </>
+      ) : (
+        <Camera style={styles.camera} type={type} ref={ref}>
+          <View style={styles.ladinho}>
+            <TouchableOpacity onPress={takePicture} style={styles.botao1}>
+              <MaterialIcons name="camera" size={100} color={colors.white} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={toggleCameraType} style={styles.botao2}>
+              <MaterialCommunityIcons name="camera-flip" size={70} color={colors.white} />
+            </TouchableOpacity>
+          </View>
+        </Camera>
       )}
-      </Camera>
+
     </View>
   );
 }

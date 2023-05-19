@@ -8,19 +8,10 @@ export const styles = StyleSheet.create({
     },
     camera: {
       flex: 1,
-      height: Dimensions.get('window').width *0.7,
-      width: Dimensions.get('window').width *0.7
-    },
-    buttonContainer: {
-      flex: 1,
-      flexDirection: 'row',
-      backgroundColor: 'transparent',
-      margin: 64,
-    },
-    button: {
-      flex: 1,
-      alignSelf: 'flex-end',
-      alignItems: 'center',
+      height: Dimensions.get('window').width,
+      width: Dimensions.get('window').width,
+      justifyContent: 'flex-end'
+      
     },
     text: {
       fontSize: 24,
@@ -28,7 +19,19 @@ export const styles = StyleSheet.create({
       color: colors.white,
     },
     img: {
-      height: Dimensions.get('window').width *0.7,
-      width: Dimensions.get('window').width *0.7
+      height: Dimensions.get('window').width,
+      width: Dimensions.get('window').width
+    },
+    botao1: {
+      width: "60%",
+      alignItems: "flex-end"
+    },
+    botao2: {
+      width: "40%",
+      alignItems: "flex-end"
+    },
+    ladinho: {
+      flexDirection: "row",
+      alignItems: "center"
     }
   });
