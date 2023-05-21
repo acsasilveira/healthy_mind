@@ -64,5 +64,8 @@ export const styles = StyleSheet.create({
     linkLugar: {
         alignItems: "center",
         marginBottom: 10
+    },
+    olho: {
+        justifyContent: "flex-end"
     }
 });

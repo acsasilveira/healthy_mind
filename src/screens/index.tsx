@@ -6,3 +6,4 @@ export { Login as ScreenLogin } from "./Login";
 export { Cadastro as ScreenCadastro} from "./Cadastrar";
 export { SCamera as ScreenCamera } from "./Camera";
 export { Perfil as ScreenPerfil} from "./Perfil";
+export { EditarPerfil as ScreenEdit } from "./EditarPerfil"

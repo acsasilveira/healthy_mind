@@ -51,10 +51,12 @@ export function SCamera() {
     <View style={styles.container}>
       {photo && photo.uri ? (
         <>
-          <Image source={{ uri: photo.uri }} style={styles.img} />
-          <TouchableOpacity onPress={() => setPhoto(undefined)}>
-            <Ionicons name="return-down-back" size={24} color={colors.secondary} />
-          </TouchableOpacity>
+          <View style={styles.camera}>
+            <TouchableOpacity onPress={() => setPhoto(undefined)}>
+              <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+            </TouchableOpacity>
+            <Image source={{ uri: photo.uri }} style={styles.img} />
+          </View>
         </>
       ) : (
         <Camera style={styles.camera} type={type} ref={ref}>

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Image, KeyboardAvoidingView } from "react-native";
-import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialIcons, Ionicons} from '@expo/vector-icons'
 import { TextInput } from 'react-native-gesture-handler';
 import {    ComponentLogo, ComponentTitle, ComponentButton
 } from '../../components';
@@ -73,10 +73,15 @@ export function Cadastro({navigation}:LoginTypes) {
                     </View>
                 </KeyboardAvoidingView>
             </View>
-
-            <View style={styles.lugarBotao} /* Botão */>
-                <ComponentButton onPressI={() => {navigation.navigate('Login')}} title="Entrar" type="geral" />
+            <View style={styles.ladoALado}>
+                <TouchableOpacity onPress={() => {navigation.navigate('Login')}} >
+                    <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+                </TouchableOpacity>
+                <View /* Botão */>
+                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="geral" />
             </View>
+            </View>
+            
         </View>
         
     );

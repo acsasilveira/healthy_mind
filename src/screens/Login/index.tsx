@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Image, Text, KeyboardAvoidingView } from "react-native";
-import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialIcons, Ionicons, Entypo } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
 import { 
     ComponentLogo, ComponentTitle, ComponentButton,
@@ -42,6 +42,10 @@ export function Login({navigation}:LoginTypes) {
                         autoCapitalize="none"
                         style={styles.textoCaixa}
                         />
+                         <TouchableOpacity onPress={() => {}}>
+                            <Entypo name="eye-with-line" size={24} color={colors.secondary} style={styles.olho} />
+                        </TouchableOpacity>
+                        
                     </View>
                 </KeyboardAvoidingView>
             </View>
@@ -52,7 +56,7 @@ export function Login({navigation}:LoginTypes) {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.lugarBotao} /* Botão */>
+            <View  style={styles.lugarBotao} /* Botão */>
                 <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="geral" />
             </View>
 

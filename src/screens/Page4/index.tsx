@@ -6,10 +6,11 @@ import {
 } from '../../components';
 import { styles } from './styles';
 import { colors } from "../../styles/colors";
-import { TabTypes } from "../../navigations/tab.navigation"
+import { Entypo } from '@expo/vector-icons'
+import { LoginTypes } from "../../navigations/login.navigation";
 
 
-export function Desabafo({}: TabTypes) {
+export function Desabafo({navigation}:LoginTypes) {
     const homeIcon = require("../../assets/home.png")
     const ansiedadeIcon = require("../../assets/ansiedade.png")
     const estresseIcon = require("../../assets/estresse.png")
@@ -36,15 +37,15 @@ export function Desabafo({}: TabTypes) {
                     autoCapitalize="none"
                     style={styles.textoCaixa}
                 />
+                <TouchableOpacity onPress={() => navigation.navigate('Camera')} style={styles.camera}>
+                    <Entypo name="camera" size={35} color={colors.secondary} />
+                </TouchableOpacity>
             </View>
 
             <View style={styles.lugarBotao} /* Botão */>
                 <ComponentButton onPressI={() => {}} title="Enviar" type="geral" />
             </View>
 
-            <View style={styles.lugarBotaoLogin} /* Botão para fazer login */> 
-                <ComponentButton onPressI={() => {}} title="Entrar" type="login" />
-            </View>
         </View>
         
     );

@@ -20,6 +20,15 @@ export const styles = StyleSheet.create({
     texto:{
         color: colors.white,
         fontSize: 20,
-        marginLeft: 20
+        marginLeft: 30,
+        marginRight: 30
+    },
+    lugarBotao: {
+        alignItems: "flex-end",
+        marginRight: 25,
+        marginBottom: 15
+    },
+    olho: {
+        justifyContent: "flex-end"
     }
 })

@@ -44,7 +44,6 @@ export const styles = StyleSheet.create({
         fontSize: 20
     },
     lugarBotao: {
-        alignItems: "flex-end",
         marginRight: 25,
         marginBottom: 15
     },
@@ -55,6 +54,11 @@ export const styles = StyleSheet.create({
     },
     ladinho :{
         flexDirection: "row",
+        alignItems: "center"
+    },
+    ladoALado: {
+        flexDirection: "row",
+        justifyContent: "space-around",
         alignItems: "center"
     }
 });

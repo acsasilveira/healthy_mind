@@ -71,5 +71,9 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         marginBottom: 15,
         marginTop: 20
+    },
+    camera: {
+        flexDirection: "row",
+        justifyContent: "flex-end"
     }
 });
