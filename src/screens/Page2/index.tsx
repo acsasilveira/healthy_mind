@@ -11,8 +11,10 @@ export function Ansiedade({}: TabTypes) {
     return(
         <View style={styles.container}>
             <ComponentLogo />
-            <ComponentTitle titleI="Frase Reguladora do dia:" />
-            <ComponentFrase fraseI="'Não tente ser sempre forte e perfeito(a)! Seja apenas você mesmo!'" />
+            <View style={styles.container2}>
+                <ComponentTitle titleI="Frase Reguladora do dia:" />
+                <ComponentFrase fraseI="'Não tente ser sempre forte e perfeito(a)! Seja apenas você mesmo!'" />
+            </View>
         </View>
         
     );

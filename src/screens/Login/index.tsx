@@ -15,7 +15,9 @@ export function Login({navigation}:LoginTypes) {
     return(
         <View style={styles.container}>
             <ComponentLogo />
-            <ComponentTitle titleI="Login" />
+            <View style={styles.container2}>
+                <ComponentTitle titleI="Login" />
+            </View>
             <View style={styles.panel} /* Email */>
                 <KeyboardAvoidingView>
                     <View style={styles.ladinho}>
@@ -42,8 +44,8 @@ export function Login({navigation}:LoginTypes) {
                         autoCapitalize="none"
                         style={styles.textoCaixa}
                         />
-                         <TouchableOpacity onPress={() => {}}>
-                            <Entypo name="eye-with-line" size={24} color={colors.secondary} style={styles.olho} />
+                         <TouchableOpacity onPress={() => {}} style={styles.olho}>
+                            <Entypo name="eye-with-line" size={24} color={colors.secondary} />
                         </TouchableOpacity>
                         
                     </View>

@@ -1,10 +1,14 @@
 import { Dimensions, StyleSheet } from 'react-native';
-import { colors } from "../../styles/colors";
+import { color } from 'react-native-reanimated';
+import { colors } from "./../../styles/colors";
 
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
+      backgroundColor: colors.primary
+    },
+    container2: {
+      alignItems: 'center'
     },
     camera: {
       flex: 1,

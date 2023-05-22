@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
-import { ScreenLogin, ScreenCadastro, ScreenCamera, ScreenPerfil, ScreenEdit } from "../screens";
+import { ScreenLogin, ScreenCadastro, ScreenCamera, ScreenPerfil, ScreenEdit, ScreenPhoto } from "../screens";
 import { TabNavigation } from "./tab.navigation";
 import { DrawerNavigation } from "./drawer.navigation";
 
@@ -13,6 +13,7 @@ type LoginStackParamList = {
   Camera: undefined
   Perfil: undefined
   Edit: undefined
+  Photo: undefined | {photo: string}
 };
 
 type LoginScreenNavigation = StackNavigationProp<LoginStackParamList, 'Login' >
@@ -31,6 +32,7 @@ export function LoginNavigation() {
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="Camera" component={ScreenCamera} />
       <Stack.Screen name="Perfil" component={ScreenPerfil} />
+      <Stack.Screen name="Photo" component={ScreenPhoto} />
       <Stack.Screen name="Edit" component={ScreenEdit} />
     </Stack.Navigator>
   )

@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.secondary,
         margin: 10,
         marginBottom: 7,
-        padding: 25
+        padding: 10
         
     },
     texto:{

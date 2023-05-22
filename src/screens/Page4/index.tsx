@@ -37,7 +37,7 @@ export function Desabafo({navigation}:LoginTypes) {
                     autoCapitalize="none"
                     style={styles.textoCaixa}
                 />
-                < TouchableOpacity onPress={() => navigation.navigate('Camera')} style={styles.camera}  /* Câmera */>
+                < TouchableOpacity onPress={() => navigation.navigate('Photo')} style={styles.camera}  /* Câmera */>
                     <Entypo name="camera" size={35} color={colors.secondary} />
                 </TouchableOpacity>
             </View>

@@ -10,7 +10,9 @@ export function EditarPerfil({navigation}: LoginTypes) {
     return (
         <View style={styles.container}>
             <ComponentLogo />
-            <ComponentTitle titleI="Perfil" />   
+            <View style={styles.container2}>
+                <ComponentTitle titleI="Perfil" />
+            </View>
             <View style={styles.panelDados} /* Nome */>
                 <View style={styles.ladinho}>
                     <View style={styles.ladinho}>

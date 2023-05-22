@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
         flex:1,
         backgroundColor: colors.primary
     },
+    container2: {
+        alignItems: 'center'
+    },
     ladinho :{
         flexDirection: "row",
         alignItems: "center"
@@ -14,7 +17,7 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.secondary,
         margin: 10,
         marginBottom: 7,
-        padding: 25
+        padding: 10
         
     },
     texto:{

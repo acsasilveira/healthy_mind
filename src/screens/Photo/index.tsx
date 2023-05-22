@@ -1,10 +1,12 @@
-import * as MediaLibrary from 'expo-media-library'
-import * as ImagePicker from 'expo-image-picker'
+import React from 'react';
+import * as MediaLibrary from 'expo-media-library';
+import * as ImagePicker from 'expo-image-picker';
 import { Camera, CameraCapturedPicture, CameraType } from 'expo-camera';
 import { useState, useRef } from 'react';
 import { Button, Text, TouchableOpacity, View, Image, Alert } from 'react-native';
 import { styles } from "./styles"
 import { MaterialCommunityIcons, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { ComponentButton, ComponentTitle } from "./../../components"
 import { colors } from '../../styles/colors';
 import { LoginTypes } from '../../navigations/login.navigation';
 
@@ -15,7 +17,7 @@ interface IPhoto {
   width: string
 }
 
-export function SCamera({navigation}: LoginTypes) {
+export function SPhoto({navigation}: LoginTypes) {
   const [type, setType] = useState(CameraType.back);
   const [permission, requestPermission] = Camera.useCameraPermissions();
   const [permissionMedia, requestPermissionMedia] = MediaLibrary.usePermissions();
@@ -56,36 +58,28 @@ export function SCamera({navigation}: LoginTypes) {
     Alert.alert("Imagem salva com sucesso!")
   }
 
+  async function pickImage() {
+    const result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      aspect: [4,3],
+      quality: 1
+    })
+    if(!result.canceled) {
+      setPhoto(result.assets[0])
+    }
+  }
+
+
   return (
     <View style={styles.container}>
-      {photo && photo.uri ? (
-        <>
-          <View style={styles.camera2}>
-            <View>
-                <TouchableOpacity onPress={() => setPhoto(undefined)} style={styles.setinha}>
-                  <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
-                </TouchableOpacity>
-                <Image source={{ uri: photo.uri }} style={styles.img} />
-                <TouchableOpacity onPress={() => navigation.navigate('Photo')} />
-              </View>
-          </View>
-        </>
-      ) : (
-        <Camera style={styles.camera} type={type} ref={ref}>
-          <View style={styles.ladinho}>
-            <TouchableOpacity onPress={() => navigation.navigate('Photo')} style={styles.botao3} /*Para voltar para o tab */>
-                <Ionicons name="caret-back-circle" size={40} color={colors.white} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={takePicture} style={styles.botao1} /* Para tirar  a foto */>
-              <MaterialIcons name="camera" size={100} color={colors.white} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={toggleCameraType} style={styles.botao2} /* Para mudar a câmera */>
-              <MaterialCommunityIcons name="camera-flip" size={70} color={colors.white} />
-            </TouchableOpacity>
-          </View>
-        </Camera>
-      )}
-
+        <TouchableOpacity onPress={() => navigation.navigate('Tab')} style={styles.setinha}>
+          <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+        </TouchableOpacity>
+      <View style={styles.container2}>
+        <ComponentTitle titleI='Câmera' />
+        <ComponentButton onPressI={() => navigation.navigate('Camera')} title="Nova foto" type='login' />
+        <ComponentButton onPressI={pickImage} title="Pegar da galeria" type='login' />
+      </View>
     </View>
   );
 }

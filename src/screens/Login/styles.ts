@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.primary,
     },
+    container2: {
+        alignItems: 'center'
+    },
     buttonSLider: {
         flexDirection: "row",
         justifyContent: "space-between",
@@ -66,6 +69,7 @@ export const styles = StyleSheet.create({
         marginBottom: 10
     },
     olho: {
-        justifyContent: "flex-end"
+        justifyContent: "flex-end",
+        marginLeft: 25
     }
 });

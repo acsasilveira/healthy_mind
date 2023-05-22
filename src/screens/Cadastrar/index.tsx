@@ -14,7 +14,9 @@ export function Cadastro({navigation}:LoginTypes) {
     return(
         <View style={styles.container}>
             <ComponentLogo />
-            <ComponentTitle titleI="Cadastro" /> 
+            <View style={styles.container2}>
+                <ComponentTitle titleI="Cadastro" />
+            </View> 
             <View style={styles.panel} /* Nome */>
                 <KeyboardAvoidingView>
                         <View style={styles.ladinho}>

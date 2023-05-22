@@ -11,7 +11,9 @@ export function Home({}: TabTypes) {
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
-            <ComponentTitle titleI="Desabafos da Semana:" />
+            <View style={styles.container2}>
+                <ComponentTitle titleI="Desabafos da Semana:" />
+            </View>
             <View /* Frames */>
                 <ComponentFrame dataI="27 de março" desabafoI="Estou meio perdida!"/>
                 <ComponentFrame dataI="28 de março" desabafoI="Nem mexi no código! Jesus toma conta!"/>
