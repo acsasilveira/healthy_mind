@@ -52,7 +52,7 @@ export function SCamera({navigation}: LoginTypes) {
 
   async function SavePhoto() {
     const asset = await MediaLibrary.createAssetAsync(photo!.uri)
-    MediaLibrary.createAlbumAsync("Imagens", asset, false)
+    MediaLibrary.createAlbumAsync("HealthyMind", asset, true)
     Alert.alert("Imagem salva com sucesso!")
   }
 
@@ -62,11 +62,15 @@ export function SCamera({navigation}: LoginTypes) {
         <>
           <View style={styles.camera2}>
             <View>
-                <TouchableOpacity onPress={() => setPhoto(undefined)} style={styles.setinha}>
+              <View style={styles.ladinho}>
+                <TouchableOpacity onPress={() => {navigation.navigate('Photo')}} style={styles.botao3}>
                   <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
                 </TouchableOpacity>
-                <Image source={{ uri: photo.uri }} style={styles.img} />
-                <TouchableOpacity onPress={() => navigation.navigate('Photo')} />
+                <TouchableOpacity onPress={SavePhoto} style={styles.botao3} /*Para salvar */>
+                  <MaterialIcons name="save" size={40} color={colors.secondary} />
+                </TouchableOpacity>
+              </View>
+              <Image source={{ uri: photo.uri }} style={styles.img} />
               </View>
           </View>
         </>

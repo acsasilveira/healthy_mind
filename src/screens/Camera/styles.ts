@@ -40,11 +40,11 @@ export const styles = StyleSheet.create({
       marginRight: 5
     },
     botao3: {
-      width: "15%",
-      alignItems: "flex-end",
       flexDirection: "row",
+      alignItems: "center",
       justifyContent: "flex-start",
-      marginLeft: 5
+      marginLeft: 5,
+      marginTop: 50
     },
     ladinho: {
       flexDirection: "row",

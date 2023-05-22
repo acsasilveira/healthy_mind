@@ -18,38 +18,23 @@ interface IPhoto {
 }
 
 export function SPhoto({navigation}: LoginTypes) {
-  const [type, setType] = useState(CameraType.back);
-  const [permission, requestPermission] = Camera.useCameraPermissions();
   const [permissionMedia, requestPermissionMedia] = MediaLibrary.usePermissions();
   const [photo, setPhoto] = useState<CameraCapturedPicture | ImagePicker.ImagePickerAsset>()
   const ref = useRef<Camera>(null)
-  const [takePhoto, setTakePhoto] = useState(false)
 
-  if (!permission) {
-    // As permissões da câmera estão sendo carregadas
+  if (!permissionMedia) {
+    // As permissões da mídia estão sendo carregadas
     return <View />
   }
 
-  if (!permission.granted) {
-    // A permissão da câmera ainda não foi dada
+  if (!permissionMedia.granted) {
+    // A permissão da mídia ainda não foi dada
     return (
       <View style={styles.container}>
-        <Text style={{ textAlign: 'center' }}>Permita o acesso à sua câmera!!</Text>
-        <Button onPress={requestPermission} title="Pemissão do Uso da Câmera" />
+        <Text style={{ textAlign: 'center', color:colors.secondary, alignItems: "center", marginTop: 10 }}>Permita o acesso à sua galeria!!</Text>
+        <Button onPress={requestPermissionMedia} title="Pemissão do Uso da Mídia" />
       </View>
     );
-  }
-
-  function toggleCameraType() {
-    setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
-  }
-
-  async function takePicture() {
-    if (ref.current) {
-      const picture = await ref.current.takePictureAsync()
-      console.log(picture)
-      setPhoto(picture)
-    }
   }
 
   async function SavePhoto() {
@@ -71,15 +56,26 @@ export function SPhoto({navigation}: LoginTypes) {
 
 
   return (
+    <>
+    {photo && photo.uri ? (
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => navigation.navigate('Tab')}>
+          <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+        </TouchableOpacity>
+        <Image source={{ uri: photo.uri }} style={styles.img} />
+      </View>
+    ):(
     <View style={styles.container}>
         <TouchableOpacity onPress={() => navigation.navigate('Tab')} style={styles.setinha}>
           <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
         </TouchableOpacity>
       <View style={styles.container2}>
         <ComponentTitle titleI='Câmera' />
-        <ComponentButton onPressI={() => navigation.navigate('Camera')} title="Nova foto" type='login' />
+        <ComponentButton onPressI={() => navigation.navigate('CameraTake')} title="Nova foto" type='login' />
         <ComponentButton onPressI={pickImage} title="Pegar da galeria" type='login' />
       </View>
     </View>
+    )}
+    </>
   );
 }
