@@ -59,9 +59,14 @@ export function SPhoto({navigation}: LoginTypes) {
     <>
     {photo && photo.uri ? (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => navigation.navigate('Tab')}>
-          <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
-        </TouchableOpacity>
+        <View style={styles.ladinho2}>
+          <TouchableOpacity onPress={() => navigation.navigate('Tab')}>
+            <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('CameraTake')} style={styles.novo}>
+            <MaterialIcons name="add-to-photos" size={40} color={colors.secondary} />
+          </TouchableOpacity>
+        </View>
         <Image source={{ uri: photo.uri }} style={styles.img} />
       </View>
     ):(

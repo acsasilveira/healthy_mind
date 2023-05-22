@@ -11,7 +11,6 @@ type LoginStackParamList = {
   Tab: undefined
   Drawer: undefined
   CameraTake: undefined
-  CameraShow: {photo: string}
   Perfil: undefined
   Edit: undefined
   Photo: undefined | {photo: string}
@@ -33,7 +32,6 @@ export function LoginNavigation() {
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="Photo" component={ScreenPhoto} />
       <Stack.Screen name="CameraTake" component={ScreenCamera} />
-      <Stack.Screen name="CameraShow" component={ScreenCamera} />
       <Stack.Screen name="Perfil" component={ScreenPerfil} />
       <Stack.Screen name="Edit" component={ScreenEdit} />
     </Stack.Navigator>
