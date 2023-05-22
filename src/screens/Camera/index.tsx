@@ -62,8 +62,8 @@ export function SCamera({navigation}: LoginTypes) {
         <>
           <View style={styles.camera2}>
             <View>
-              <View style={styles.ladinho}>
-                <TouchableOpacity onPress={() => {navigation.navigate('Photo')}} style={styles.botao3}>
+              <View style={styles.ladinho2}>
+                <TouchableOpacity onPress={() => {navigation.navigate('Photo', {photo: photo!.uri})}} style={styles.botao3}>
                   <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={SavePhoto} style={styles.botao3} /*Para salvar */>
