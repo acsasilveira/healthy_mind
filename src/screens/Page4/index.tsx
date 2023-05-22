@@ -22,22 +22,22 @@ export function Desabafo({navigation}:LoginTypes) {
                 <Text style={styles.textoDia}>Dia: </Text>
                     <TextInput 
                         placeholder="03 de abril..."
-                        placeholderTextColor={colors.cinza}
+                        placeholderTextColor={colors.primary}
                         keyboardType="default"
                         autoCapitalize="none"
                         style={styles.textoDia}
                     />
             </View>
 
-            <View style={styles.panel} /* Caixa de Texto */>
+            <View style={styles.panel} /* Desabafo */>
                 <TextInput 
                     placeholder="Escreva seu desabafo..."
-                    placeholderTextColor={colors.cinza}
+                    placeholderTextColor={colors.black}
                     keyboardType="default"
                     autoCapitalize="none"
                     style={styles.textoCaixa}
                 />
-                <TouchableOpacity onPress={() => navigation.navigate('Camera')} style={styles.camera}>
+                < TouchableOpacity onPress={() => navigation.navigate('Camera')} style={styles.camera}  /* Câmera */>
                     <Entypo name="camera" size={35} color={colors.secondary} />
                 </TouchableOpacity>
             </View>

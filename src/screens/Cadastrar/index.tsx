@@ -74,7 +74,7 @@ export function Cadastro({navigation}:LoginTypes) {
                 </KeyboardAvoidingView>
             </View>
             <View style={styles.ladoALado}>
-                <TouchableOpacity onPress={() => {navigation.navigate('Login')}} >
+                <TouchableOpacity onPress={() => {navigation.navigate('Login')}} /* Voltar */>
                     <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
                 </TouchableOpacity>
                 <View /* Botão */>

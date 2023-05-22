@@ -4,7 +4,7 @@ import { LoginNavigation } from "./login.navigation";
 
 export function Navigation() {
   return (
-    <NavigationContainer>
+    <NavigationContainer /* Declara que por padrão a primeira página é de login */>
       <LoginNavigation />
     </NavigationContainer>
   );

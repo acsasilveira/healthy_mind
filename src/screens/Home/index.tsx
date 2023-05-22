@@ -16,6 +16,7 @@ export function Home({}: TabTypes) {
                 <ComponentFrame dataI="27 de março" desabafoI="Estou meio perdida!"/>
                 <ComponentFrame dataI="28 de março" desabafoI="Nem mexi no código! Jesus toma conta!"/>
                 <ComponentFrame dataI="31 de março" desabafoI="Foiiii um pouquinho"/>
+                <ComponentFrame dataI="21 de maio" desabafoI="Estou extremamente feliz! Está mara!! Falta só o backend pra rodar ;)"/>
             </View>
         </View>
         

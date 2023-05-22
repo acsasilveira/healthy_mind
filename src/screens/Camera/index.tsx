@@ -20,16 +20,16 @@ export function SCamera() {
   const [photo, setPhoto] = useState<IPhoto>()
 
   if (!permission) {
-    // Camera permissions are still loading
+    // As permissões da câmera estão sendo carregadas
     return <View />
   }
 
   if (!permission.granted) {
-    // Camera permissions are not granted yet
+    // A permissão da câmera ainda não foi dada
     return (
       <View style={styles.container}>
         <Text style={{ textAlign: 'center' }}>Permita o acesso à sua câmera!!</Text>
-        <Button onPress={requestPermission} title="grant permission" />
+        <Button onPress={requestPermission} title="Pemissão do Uso da Câmera" />
       </View>
     );
   }
@@ -61,10 +61,10 @@ export function SCamera() {
       ) : (
         <Camera style={styles.camera} type={type} ref={ref}>
           <View style={styles.ladinho}>
-            <TouchableOpacity onPress={takePicture} style={styles.botao1}>
+            <TouchableOpacity onPress={takePicture} style={styles.botao1} /* Para tirar  a foto */>
               <MaterialIcons name="camera" size={100} color={colors.white} />
             </TouchableOpacity>
-            <TouchableOpacity onPress={toggleCameraType} style={styles.botao2}>
+            <TouchableOpacity onPress={toggleCameraType} style={styles.botao2} /* Para mudar a câmera */>
               <MaterialCommunityIcons name="camera-flip" size={70} color={colors.white} />
             </TouchableOpacity>
           </View>

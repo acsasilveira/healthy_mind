@@ -38,36 +38,35 @@ export function TabNavigation() {
       headerShown: false
        }}>
       <Tab.Screen name="Home" component={ScreenHome} options={{
+        // Ícone do Home
         tabBarIcon: () => (
           <AntDesign name="home" size={45} color="white" />
         ),
         tabBarShowLabel: false
       }}/>
       <Tab.Screen name="Ansiedade" component={ScreenAnsiedade} options={{
+        // Ícone da Ansiedade (cérebro)
         tabBarIcon: () => (
           <FontAwesome5 name="brain" size={45} color="white" />
         ),
         tabBarShowLabel: false
       }}/>
       <Tab.Screen name="Estresse" component={ScreenEstresse} options={{
+        // Ícone do Estresse (nuvem com raio)
         tabBarIcon: () => (
           <Feather name="cloud-lightning" size={45} color="white" />
         ),
         tabBarShowLabel: false
       }}/>
       <Tab.Screen name="Desabafo" component={ScreenDesabafo} options={{
+        // Ícone do Desabafo (lápis)
         tabBarIcon: () => (
           <FontAwesome name="pencil-square-o" size={45} color="white" />
         ),
         tabBarShowLabel: false
       }}/>
-      <Tab.Screen name="Camera" component={ScreenCamera} options={{
-        tabBarIcon: () => (
-          <Entypo name="camera" color="white" size={45} />
-        ),
-        tabBarShowLabel: false
-      }}/>
       <Tab.Screen name="Perfil" component={ScreenPerfil} options={{
+        // Ícone do Perfil
         tabBarIcon: () => (
           <Ionicons name="person-circle" color="white" size={45} />
         ),
@@ -78,10 +77,3 @@ export function TabNavigation() {
     </Tab.Navigator>
   );
 }
-
-const style = StyleSheet.create({
-  img: {
-    width: 5,
-    height: 5
-  }
-})

@@ -10,9 +10,8 @@ export function EditarPerfil({navigation}: LoginTypes) {
     return (
         <View style={styles.container}>
             <ComponentLogo />
-                <ComponentTitle titleI="Perfil" />
-                
-            <View style={styles.panelDados} /* Email */>
+            <ComponentTitle titleI="Perfil" />   
+            <View style={styles.panelDados} /* Nome */>
                 <View style={styles.ladinho}>
                     <View style={styles.ladinho}>
                         <Ionicons name="person-circle" size={30} color={colors.white} />
@@ -21,7 +20,7 @@ export function EditarPerfil({navigation}: LoginTypes) {
                     </View>
                 </View>
             </View>
-            <View style={styles.panelDados} /* Data */>
+            <View style={styles.panelDados} /* Email */>
                 <View style={styles.ladinho}>
                     <MaterialIcons name="email" size={30} color={colors.white}/>
                     <Text style={styles.texto}>acsa.silveiras@gmail.com</Text>
@@ -29,7 +28,7 @@ export function EditarPerfil({navigation}: LoginTypes) {
                 </View>
             </View>
             
-            <View style={styles.panelDados} /* Data */>
+            <View style={styles.panelDados} /* Telefone */>
                 <KeyboardAvoidingView>
                     <View style={styles.ladinho}>
                         <Feather name="phone" size={30} color={colors.white}/>
@@ -42,7 +41,7 @@ export function EditarPerfil({navigation}: LoginTypes) {
                     </View>
                 </KeyboardAvoidingView>
             </View>
-            <View style={styles.panelDados} /* Data */>
+            <View style={styles.panelDados} /* Aniversário */>
                 <KeyboardAvoidingView>
                     <View style={styles.ladinho}>
                         <FontAwesome name="birthday-cake" size={30} color={colors.white}/>
@@ -55,7 +54,7 @@ export function EditarPerfil({navigation}: LoginTypes) {
                     </View>
                 </KeyboardAvoidingView>
             </View>
-            <View style={styles.panelDados} /* Data */>
+            <View style={styles.panelDados} /* Senha */>
                 <KeyboardAvoidingView>
                     <View style={styles.ladinho}>
                         <Ionicons  name="md-key-outline" size={30} color={colors.white} />
@@ -65,7 +64,7 @@ export function EditarPerfil({navigation}: LoginTypes) {
                         autoCapitalize="none"
                         style={styles.texto}
                         />
-                        <TouchableOpacity onPress={() => {}}>
+                        <TouchableOpacity onPress={() => {}} /* Olhinho */>
                             <Entypo name="eye-with-line" size={24} color={colors.white} style={styles.olho} />
                         </TouchableOpacity>
                     </View>
