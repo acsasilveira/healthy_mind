@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
       alignItems: "flex-end"
     },
     botao2: {
-      width: "35%",
+      width: "25%",
       alignItems: "flex-end",
       marginRight: 5
     },
