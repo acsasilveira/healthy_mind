@@ -1,8 +1,8 @@
 import React from 'react';
 import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/drawer';
-import { ScreenCamera, ScreenPerfil} from "../screens";
-import { Ionicons, Entypo } from '@expo/vector-icons';
+import { ScreenCamera, ScreenPerfil, ScreenLogin, ScreenCadastro} from "../screens";
 import { colors } from '../styles/colors';
+import { color } from 'react-native-reanimated';
 
 
 type DrawerParamList = {
@@ -17,20 +17,16 @@ export type DrawerTypes ={
 export function DrawerNavigation() {
   const Drawer = createDrawerNavigator();
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Perfil" component={ScreenPerfil}
-      options={{
-        drawerIcon: () => (
-          <Ionicons name="person-circle" />
-        )
-      }} />
-      <Drawer.Screen name="Camera" component={ScreenCamera}
-      options={{
-        drawerIcon: () => (
-          <Entypo name="camera" size={24} color={colors.white} />
-        )
-      }} />
-  
+    <Drawer.Navigator screenOptions={{
+      headerShown: false,
+      drawerStyle: {
+        backgroundColor: colors.primary
+      },
+      drawerInactiveTintColor: colors.white,
+      drawerActiveTintColor: colors.secondary
+    }}>
+      <Drawer.Screen name="Login" component={ScreenLogin} />
+      <Drawer.Screen name="Cadastro" component={ScreenCadastro} />
     </Drawer.Navigator>
   );
 }

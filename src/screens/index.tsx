@@ -7,4 +7,5 @@ export { Cadastro as ScreenCadastro} from "./Cadastrar";
 export { SPhoto as ScreenPhoto } from "./Photo";
 export { SCamera as ScreenCamera} from "./Camera";
 export { Perfil as ScreenPerfil} from "./Perfil";
-export { EditarPerfil as ScreenEdit } from "./EditarPerfil"
+export { EditarPerfil as ScreenEdit } from "./EditarPerfil";
+export { SLocation as ScreenLocation} from "./Location";

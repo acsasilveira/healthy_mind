@@ -31,8 +31,8 @@ export function SPhoto({navigation}: LoginTypes) {
     // A permissão da mídia ainda não foi dada
     return (
       <View style={styles.container}>
-        <Text style={{ textAlign: 'center', color:colors.secondary, alignItems: "center", marginTop: 10 }}>Permita o acesso à sua galeria!!</Text>
-        <Button onPress={requestPermissionMedia} title="Pemissão do Uso da Mídia" />
+        <Text style={{ textAlign: 'center', color:colors.secondary, alignItems: "center", marginTop: 25}}>Permita o acesso à sua galeria!!</Text>
+        <Button onPress={requestPermissionMedia} title="Clique Aqui" />
       </View>
     );
   }

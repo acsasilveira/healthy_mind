@@ -59,8 +59,8 @@ export function SCamera({navigation}: LoginTypes) {
     // A permissão da câmera ainda não foi dada
     return (
       <View style={styles.container}>
-        <Text style={{ textAlign: 'center' }}>Permita o acesso à sua câmera!!</Text>
-        <Button onPress={requestPermission} title="Pemissão do Uso da Câmera" />
+        <Text style={{ textAlign: 'center', marginTop: 25 }}>Permita o acesso à sua câmera!!</Text>
+        <Button onPress={requestPermission} title="Clique Aqui"/>
       </View>
     );
   }

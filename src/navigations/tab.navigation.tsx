@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { ScreenPerfil, ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenCamera } from "../screens";
+import { ScreenPerfil, ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLocation} from "../screens";
 import { colors } from '../styles/colors';
 import { Image, StyleSheet } from 'react-native';
 import { Ionicons, Entypo, AntDesign, FontAwesome5, Feather, FontAwesome } from '@expo/vector-icons';
@@ -62,6 +62,13 @@ export function TabNavigation() {
         // Ícone do Desabafo (lápis)
         tabBarIcon: () => (
           <FontAwesome name="pencil-square-o" size={45} color="white" />
+        ),
+        tabBarShowLabel: false
+      }}/>
+      <Tab.Screen name="Location" component={ScreenLocation} options={{
+        // Ícone da Localização
+        tabBarIcon: () => (
+          <Entypo name="location-pin" color="white" size={45} />
         ),
         tabBarShowLabel: false
       }}/>
