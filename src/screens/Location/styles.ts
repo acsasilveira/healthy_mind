@@ -6,6 +6,10 @@ export const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: colors.primary,
     },
+    container2: {
+      flexDirection: 'row',
+      justifyContent: 'center'
+    },
     paragraph: {
       fontSize: 18,
       textAlign: 'center',
@@ -14,5 +18,17 @@ export const styles = StyleSheet.create({
     map: {
       width: Dimensions.get("window").width,
       height: Dimensions.get("window").height *0.8
+    },
+    pesquisaFrame: {
+      position: 'absolute',
+      zIndex: 1,
+      width: '90%',
+      top: 500,
+    },
+    pesquisaConteudo: {
+      height: 56, 
+      borderRadius:7,
+      borderWidth: 2, 
+      borderColor: colors.secondary
     }
   });

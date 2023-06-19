@@ -25,10 +25,6 @@ export type TabTypes ={
 const Tab = createBottomTabNavigator();
 
 export function TabNavigation() {
-    const homeIcon = require("../assets/home.png")
-    const ansiedadeIcon = require("../assets/ansiedade.png")
-    const estresseIcon = require("../assets/estresse.png")
-    const desabafoIcon = require("../assets/desabafo.png")
 
   return (
     <Tab.Navigator screenOptions={{

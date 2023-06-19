@@ -10,11 +10,6 @@ import { TabTypes } from "../../navigations/tab.navigation"
 
 export function Estresse({}: TabTypes) {
 
-    const homeIcon = require("../../assets/home.png")
-    const ansiedadeIcon = require("../../assets/ansiedade.png")
-    const estresseIcon = require("../../assets/estresseClick.png")
-    const desabafoIcon = require("../../assets/desabafo.png")
-
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>

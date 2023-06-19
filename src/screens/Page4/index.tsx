@@ -11,10 +11,7 @@ import { LoginTypes } from "../../navigations/login.navigation";
 
 
 export function Desabafo({navigation}:LoginTypes) {
-    const homeIcon = require("../../assets/home.png")
-    const ansiedadeIcon = require("../../assets/ansiedade.png")
-    const estresseIcon = require("../../assets/estresse.png")
-    const desabafoIcon = require("../../assets/desabafoClick.png")
+
     return(
         <View style={styles.container}>
             <ComponentLogo></ComponentLogo>
