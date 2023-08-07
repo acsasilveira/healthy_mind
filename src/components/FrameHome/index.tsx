@@ -8,7 +8,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 export interface IFrame{
     dataI: string;
     desabafoI: string;
-    onPressN: undefined | void;
+    onPressN: undefined | null;
 }
 
 

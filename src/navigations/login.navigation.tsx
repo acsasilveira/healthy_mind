@@ -12,7 +12,7 @@ type LoginStackParamList = {
   Drawer: undefined
   CameraTake: undefined
   Perfil: undefined
-  Edit: undefined
+  EditPerfil: undefined
   Photo: undefined | {photo: string}
   Metas: undefined
   AddMeta: undefined
@@ -38,7 +38,7 @@ export function LoginNavigation() {
       <Stack.Screen name="Photo" component={ScreenPhoto} />
       <Stack.Screen name="CameraTake" component={ScreenCamera} />
       <Stack.Screen name="Perfil" component={ScreenPerfil} />
-      <Stack.Screen name="Edit" component={ScreenEditProfile} />
+      <Stack.Screen name="EditPerfil" component={ScreenEditProfile} />
       <Stack.Screen name="EditDesabafo" component={ScreenEditDesabafo} />
       <Stack.Screen name="Metas" component={ScreenMetas} />
       <Stack.Screen name="AddMeta" component={ScreenAddMeta} />

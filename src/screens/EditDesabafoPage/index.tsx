@@ -32,6 +32,9 @@ export function EditarDesabafo({navigation}: LoginTypes) {
                     style={styles.textoCaixa}
                 />
             </View>
+            <View  style={styles.lugarBotao} /* Botão */>
+                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Salvar" type="geral" />
+            </View>
             
         </View>
     )

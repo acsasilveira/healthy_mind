@@ -1,4 +1,5 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Picker, TouchableOpacity } from 'react-native';
 import { styles } from "./styles";
 import { ComponentLogo, ComponentTitle, ComponentButton} from "./../../components";
 import { TabTypes } from "../../navigations/tab.navigation";
@@ -7,13 +8,13 @@ import { colors } from "../../styles/colors";
 import { LoginTypes } from '../../navigations/login.navigation';
 
 export function Perfil({ navigation }: LoginTypes) {
-
+    const [selectedValue, setSelectedValue] = useState("Selecione uma opção");
     return (
         <View style={styles.container}>
             <ComponentLogo />
             <View style={styles.ladinho} /* Título e ícone de edição */>
                 <ComponentTitle titleI="Perfil" />
-                <TouchableOpacity onPress={() => {navigation.navigate('Edit')}}>
+                <TouchableOpacity onPress={() => {navigation.navigate('EditPerfil')}}>
                     <AntDesign name="edit" size={30} color={colors.secondary} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Location')}>
@@ -24,6 +25,18 @@ export function Perfil({ navigation }: LoginTypes) {
                 <View style={styles.ladinho}>
                     <Ionicons name="person-circle" size={30} color={colors.white} />
                     <Text style={styles.texto}>ACSA SILVEIRA</Text>
+                </View>
+            </View>
+            <View style={styles.panelDados} /* Gênero */>
+                <View style={styles.ladinho}>
+                    <Ionicons name="ios-people-circle" size={30} color={colors.white}/>
+                    <Picker
+                        selectedValue={selectedValue}
+                        style={{ height: 50, width: 150 }}
+                        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
+                            <Picker.Item label="Java" value="java" />
+                            <Picker.Item label="JavaScript" value="js" />
+      </Picker>
                 </View>
             </View>
             <View style={styles.panelDados} /* Email */>
