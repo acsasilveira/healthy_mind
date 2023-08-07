@@ -8,7 +8,11 @@ import { styles } from './styles';
 import { colors } from "../../styles/colors";
 import { Entypo } from '@expo/vector-icons'
 import { LoginTypes } from "../../navigations/login.navigation";
-
+import * as MediaLibrary from 'expo-media-library';
+import * as ImagePicker from 'expo-image-picker';
+import { Camera, CameraCapturedPicture, CameraType } from 'expo-camera';
+import { useState, useRef } from 'react';
+import { MaterialCommunityIcons, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 export function Desabafo({navigation}:LoginTypes) {
 

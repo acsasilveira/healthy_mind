@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     },
     map: {
       width: Dimensions.get("window").width,
-      height: Dimensions.get("window").height *0.8
+      height: Dimensions.get("window").height *0.7
     },
     pesquisaFrame: {
       position: 'absolute',
@@ -30,5 +30,9 @@ export const styles = StyleSheet.create({
       borderRadius:7,
       borderWidth: 2, 
       borderColor: colors.secondary
+    },
+    ladinho: {
+      flexDirection: "row",
+      alignItems: "center",
     }
   });

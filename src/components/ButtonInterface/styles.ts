@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
         margin: 10,
         borderRadius: 15,
         padding: 10,
-        width: "40%"
+        width: "40%",
     },
     textGeral: {
         fontSize: 20,
@@ -26,6 +26,7 @@ export const styles = StyleSheet.create({
         fontSize: 20
     },
     buttonVoltar: {
+        alignItems: "center",
         backgroundColor: colors.primary,
         width: "40%",
     },

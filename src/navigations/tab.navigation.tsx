@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { ScreenPerfil, ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLocation} from "../screens";
+import { ScreenPerfil, ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLocation, ScreenCalendar} from "../screens";
 import { colors } from '../styles/colors';
 import { Image, StyleSheet } from 'react-native';
 import { Ionicons, Entypo, AntDesign, FontAwesome5, Feather, FontAwesome } from '@expo/vector-icons';
@@ -14,7 +14,7 @@ type TabParamList = {
   Estresse: undefined
   Desabafo: undefined
   Camera: undefined
-
+  
 };
 
 type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, 'Perfil' >
@@ -61,10 +61,10 @@ export function TabNavigation() {
         ),
         tabBarShowLabel: false
       }}/>
-      <Tab.Screen name="Location" component={ScreenLocation} options={{
-        // Ícone da Localização
+      <Tab.Screen name="Calendario" component={ScreenCalendar} options={{
+        // Ícone do Perfil
         tabBarIcon: () => (
-          <Entypo name="location-pin" color="white" size={45} />
+          <FontAwesome name="calendar" color="white" size={45} />
         ),
         tabBarShowLabel: false
       }}/>
@@ -75,6 +75,7 @@ export function TabNavigation() {
         ),
         tabBarShowLabel: false
       }}/>
+      
       
     
     </Tab.Navigator>

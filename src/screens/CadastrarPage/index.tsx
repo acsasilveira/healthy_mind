@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Image, KeyboardAvoidingView } from "react-native";
-import { MaterialIcons, Ionicons} from '@expo/vector-icons'
+import { MaterialIcons, Ionicons, Entypo} from '@expo/vector-icons'
 import { TextInput } from 'react-native-gesture-handler';
 import {    ComponentLogo, ComponentTitle, ComponentButton
 } from '../../components';
@@ -15,7 +15,7 @@ export function Cadastro({navigation}:LoginTypes) {
         <View style={styles.container}>
             <ComponentLogo />
             <View style={styles.container2}>
-                <ComponentTitle titleI="Cadastro" />
+                <ComponentTitle titleI="Cadastre-se" />
             </View> 
             <View style={styles.panel} /* Nome */>
                 <KeyboardAvoidingView>
@@ -57,6 +57,9 @@ export function Cadastro({navigation}:LoginTypes) {
                         autoCapitalize="none"
                         style={styles.textoCaixa}
                         />
+                        <TouchableOpacity onPress={() => {}} style={styles.olho}>
+                            <Entypo name="eye-with-line" size={24} color={colors.secondary} />
+                        </TouchableOpacity>
                     </View>
                 </KeyboardAvoidingView>
             </View>
@@ -72,15 +75,18 @@ export function Cadastro({navigation}:LoginTypes) {
                         autoCapitalize="none"
                         style={styles.textoCaixa}
                         />
+                        <TouchableOpacity onPress={() => {}} style={styles.olho}>
+                            <Entypo name="eye-with-line" size={24} color={colors.secondary} />
+                        </TouchableOpacity>
                     </View>
                 </KeyboardAvoidingView>
             </View>
             <View style={styles.ladoALado}>
                 <TouchableOpacity onPress={() => {navigation.navigate('Login')}} /* Voltar */>
-                    <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+                    <Ionicons name="caret-back-circle" size={40} color={colors.white} />
                 </TouchableOpacity>
                 <View /* Botão */>
-                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="geral" />
+                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="login" />
             </View>
             </View>
             

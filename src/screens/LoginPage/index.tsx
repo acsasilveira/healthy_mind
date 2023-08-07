@@ -44,7 +44,7 @@ export function Login({navigation}:LoginTypes) {
                         autoCapitalize="none"
                         style={styles.textoCaixa}
                         />
-                         <TouchableOpacity onPress={() => {}} style={styles.olho}>
+                        <TouchableOpacity onPress={() => {}} style={styles.olho}>
                             <Entypo name="eye-with-line" size={24} color={colors.secondary} />
                         </TouchableOpacity>
                         
@@ -59,7 +59,7 @@ export function Login({navigation}:LoginTypes) {
             </View>
 
             <View  style={styles.lugarBotao} /* Botão */>
-                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="geral" />
+                <ComponentButton onPressI={() => navigation.navigate('Tab')} title="Entrar" type="login" />
             </View>
 
             

@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.primary,
     },
     container2: {
-        justifyContent: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between'
     },
     buttonSLider: {
         flexDirection: "row",
@@ -16,19 +17,29 @@ export const styles = StyleSheet.create({
         height: 100,
         alignItems: "center"
     },
-    panel: {
-        backgroundColor: colors.white,
-        margin: 20,
-        marginTop: 10,
-        padding: 10,
-        borderRadius: 5
-        
-    },
     img: {
         width: 80,
         height: 80,
         alignItems: "center",
         justifyContent: "center"
+    },
+    ladinho: {
+        flexDirection: "row",
+        alignItems: "center",
+        
+    },
+    panelData: {
+        backgroundColor: colors.secondary,
+        margin: 20,
+        padding: 25
+        
+    },
+    panel: {
+        backgroundColor: colors.white,
+        margin: 20,
+        marginTop: 10,
+        padding: 25
+        
     },
     button: {
         alignItems: "center",
@@ -36,7 +47,15 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.secondary,
         borderRadius: 15,
         padding: 10,
-        width: "40%"        
+        width: "30%"        
+    },
+    textoDia: {
+        color: colors.primary,
+        fontSize: 20
+    },
+    textoMeta: {
+        color: colors.secondary,
+        fontSize: 20
     },
     textoBotao: {
         color: colors.primary,
@@ -47,21 +66,27 @@ export const styles = StyleSheet.create({
         fontSize: 20
     },
     lugarBotao: {
+        alignItems: "flex-end",
         marginRight: 25,
         marginBottom: 15
     },
-    icon: {
-        fontSize: 28,
+    buttonLogin: {
+        alignItems: "center",
+        backgroundColor: colors.white,
+        padding: 10,
+        width: "90%"
+    },
+    textoBotaoLogin: {
         color: colors.secondary,
-        padding: 5
+        fontSize: 20
     },
-    ladinho :{
-        flexDirection: "row",
-        alignItems: "center"
+    lugarBotaoLogin: {
+        alignItems: "center",
+        marginBottom: 15,
+        marginTop: 20
     },
-    ladoALado: {
+    camera: {
         flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center"
+        justifyContent: "flex-end"
     }
 });

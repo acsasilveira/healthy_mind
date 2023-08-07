@@ -3,12 +3,13 @@ import * as Location from 'expo-location';
 import { GooglePlaceData, GooglePlaceDetail, GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import MapViewDirections, {} from "react-native-maps-directions";
 import MapView, { Region, Marker, Polyline } from 'react-native-maps';
-import { Text, View } from 'react-native';
-import { ComponentLogo } from '../../components';
-import { Entypo } from '@expo/vector-icons';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { ComponentLogo, ComponentTitle } from '../../components';
+import { Entypo, Ionicons } from '@expo/vector-icons';
 import { styles } from "./styles"
 import { colors } from '../../styles/colors';
 import { API_GOOGLE } from '@env';
+import { LoginTypes } from '../../navigations/login.navigation';
 
 
 type ICoords ={
@@ -16,7 +17,7 @@ type ICoords ={
   longitude: number
 }
 
-export function SLocation() {
+export function SLocation({navigation}: LoginTypes) {
   const [location, setLocation] = useState<Location.LocationObject | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [region, setRegion] = useState<Region>();
@@ -96,6 +97,14 @@ export function SLocation() {
   return (
     <View style={styles.container}>
       <ComponentLogo />
+      <View style={styles.container2}>
+        <View style={styles.ladinho}>
+          <TouchableOpacity onPress={() => navigation.navigate('Tab')}>
+            <Ionicons name="caret-back-circle" size={40} color={colors.secondary} />
+          </TouchableOpacity>
+          <ComponentTitle titleI='Sua localização' />
+        </View>
+      </View>
       <GooglePlacesAutocomplete
         styles={{ container: styles.pesquisaFrame, textInput: styles.pesquisaConteudo}}
         placeholder="Onde você vai"

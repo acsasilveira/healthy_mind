@@ -17,5 +17,9 @@ export const styles = StyleSheet.create({
     text: {
         fontSize: 15,
         margin: 7
+    },
+    ladinho: {
+        flexDirection: "row",
+        alignItems: "center",
     }
 })

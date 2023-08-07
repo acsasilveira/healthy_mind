@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
-import { ScreenLogin, ScreenCadastro, ScreenCamera, ScreenPerfil, ScreenEdit, ScreenPhoto } from "../screens";
+import { ScreenLogin, ScreenCadastro, ScreenCamera, ScreenPerfil, ScreenPhoto, ScreenMetas, ScreenAddMeta, ScreenLocation, ScreenEditProfile, ScreenEditDesabafo, ScreenEditMeta } from "../screens";
 import { TabNavigation } from "./tab.navigation";
 import { DrawerNavigation } from "./drawer.navigation";
 
@@ -14,6 +14,11 @@ type LoginStackParamList = {
   Perfil: undefined
   Edit: undefined
   Photo: undefined | {photo: string}
+  Metas: undefined
+  AddMeta: undefined
+  EditMeta: undefined
+  Location: undefined
+  EditDesabafo: undefined
 };
 
 type LoginScreenNavigation = StackNavigationProp<LoginStackParamList, 'Login' >
@@ -33,7 +38,12 @@ export function LoginNavigation() {
       <Stack.Screen name="Photo" component={ScreenPhoto} />
       <Stack.Screen name="CameraTake" component={ScreenCamera} />
       <Stack.Screen name="Perfil" component={ScreenPerfil} />
-      <Stack.Screen name="Edit" component={ScreenEdit} />
+      <Stack.Screen name="Edit" component={ScreenEditProfile} />
+      <Stack.Screen name="EditDesabafo" component={ScreenEditDesabafo} />
+      <Stack.Screen name="Metas" component={ScreenMetas} />
+      <Stack.Screen name="AddMeta" component={ScreenAddMeta} />
+      <Stack.Screen name="EditMeta" component={ScreenEditMeta} />
+      <Stack.Screen name="Location" component={ScreenLocation} />
     </Stack.Navigator>
   )
 }

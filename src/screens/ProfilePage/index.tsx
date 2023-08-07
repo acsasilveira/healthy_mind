@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from "./styles";
 import { ComponentLogo, ComponentTitle, ComponentButton} from "./../../components";
 import { TabTypes } from "../../navigations/tab.navigation";
-import { AntDesign, Ionicons, MaterialIcons, Feather, FontAwesome } from  '@expo/vector-icons'
+import { AntDesign, Ionicons, MaterialIcons, Feather, FontAwesome, Entypo } from  '@expo/vector-icons'
 import { colors } from "../../styles/colors";
 import { LoginTypes } from '../../navigations/login.navigation';
 
@@ -15,6 +15,9 @@ export function Perfil({ navigation }: LoginTypes) {
                 <ComponentTitle titleI="Perfil" />
                 <TouchableOpacity onPress={() => {navigation.navigate('Edit')}}>
                     <AntDesign name="edit" size={30} color={colors.secondary} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Location')}>
+                    <Entypo name="location-pin" color={colors.secondary} size={30} />
                 </TouchableOpacity>
             </View>
             <View style={styles.panelDados} /* Nome */>
