@@ -1,9 +1,6 @@
 import { ReactNode } from "react"
 export interface IUser {
     nome?: string
-    telefone?: string
-    genero?: string
-    aniversario?: string
     email?: string
     password?: string
 }
@@ -12,9 +9,6 @@ export interface IResponseUser {
         id: number
         nome: string
         email: string
-        telefone: string
-        genero: string
-        aniversario: string
     }
     token: {
         token: string
@@ -28,11 +22,8 @@ export interface IAuthContextData {
     loadUserStorageData(): Promise<boolean>
     user: {
         id: number
-        nome: string
         email: string
-        telefone: string
-        genero: string
-        aniversario: string
+        nome: string
     }
 }
 
