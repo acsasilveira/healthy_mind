@@ -1,6 +1,6 @@
 <h2> 🧠 Healthy Mind </h2>
 
-📱 | É um aplicativo em desenvolvimento
+📱 | É um sistema mobile, ou seja, um <b>aplicativo</b>
 
 <img align="center" alt="TypeScript" height="15" width="15" src="https://github.com/devicons/devicon/blob/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/typescript/typescript-original.svg" /> | Desenvolvido em TypeScript
 
