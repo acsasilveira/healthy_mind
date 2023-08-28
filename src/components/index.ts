@@ -3,3 +3,4 @@ export { Frame as ComponentFrame } from "./FrameHome";
 export { Title as ComponentTitle } from "./Title";
 export { Frase as ComponentFrase } from "./Frase";
 export { ButtonInterface as ComponentButton} from "./ButtonInterface";
+export { Loading as ComponentLoading} from "./Loading";

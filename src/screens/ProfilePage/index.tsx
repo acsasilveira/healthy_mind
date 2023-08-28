@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, Picker, TouchableOpacity } from 'react-native';
+import { View, Text,TouchableOpacity} from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 import { styles } from "./styles";
 import { ComponentLogo, ComponentTitle, ComponentButton} from "./../../components";
 import { TabTypes } from "../../navigations/tab.navigation";
@@ -30,13 +31,11 @@ export function Perfil({ navigation }: LoginTypes) {
             <View style={styles.panelDados} /* Gênero */>
                 <View style={styles.ladinho}>
                     <Ionicons name="ios-people-circle" size={30} color={colors.white}/>
-                    <Picker
-                        selectedValue={selectedValue}
-                        style={{ height: 50, width: 150 }}
-                        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-                            <Picker.Item label="Java" value="java" />
-                            <Picker.Item label="JavaScript" value="js" />
-      </Picker>
+                    <Picker>
+                            <Picker.Item label="Feminino" value="feminino" />
+                            <Picker.Item label="Masculino" value="masculino" />
+                            <Picker.Item label="Outros" value="indefinido" />
+                    </Picker>
                 </View>
             </View>
             <View style={styles.panelDados} /* Email */>
