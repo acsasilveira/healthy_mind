@@ -7,9 +7,11 @@ import { TabTypes } from "../../navigations/tab.navigation";
 import { AntDesign, Ionicons, MaterialIcons, Feather, FontAwesome, Entypo } from  '@expo/vector-icons'
 import { colors } from "../../styles/colors";
 import { LoginTypes } from '../../navigations/login.navigation';
+import { useAuth } from '../../hooks/auth';
 
 export function Perfil({ navigation }: LoginTypes) {
     const [selectedValue, setSelectedValue] = useState("Selecione uma opção");
+    const {signOut} = useAuth();
     return (
         <View style={styles.container}>
             <ComponentLogo />
@@ -54,6 +56,13 @@ export function Perfil({ navigation }: LoginTypes) {
                 <View style={styles.ladinho}>
                     <FontAwesome name="birthday-cake" size={30} color={colors.white}/>
                     <Text style={styles.texto}>15/12/2005</Text>
+                </View>
+            </View>
+            <View /* Logout */>
+                <View style={{margin: 20}}>
+                    <TouchableOpacity onPress={signOut}>
+                        <AntDesign name="logout" size={30} color={colors.secondary}/>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>

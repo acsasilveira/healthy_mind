@@ -1,4 +1,4 @@
-import api from "../../api";
+import {api} from "../../api";
 
 export interface IRegister {
     name?: string
@@ -15,6 +15,7 @@ export interface IAuthenticate {
 }
 
 export interface IUser {
+    token: any;
     id: number
     name: string
     email: string
@@ -36,7 +37,7 @@ class UserData {
         return api.post<IUser>('/register', data)
     }
     login(data: IAuthenticate){
-        return api.post<IUser>('/login', data)
+        return api.post<IUserLogin>('/login', data)
     }
 }
 
