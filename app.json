@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Healthy Mind",
-    "slug": "Healthy Mind",
+    "slug": "HealthyMind",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,13 +15,29 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Permita que $(PRODUCT_NAME) acesse suas mídias",
+        "NSPhotoLibraryAddUsageDescription": "Permita que $(PRODUCT_NAME) salve fotos",
+        "NSCameraUsageDescription": "Permita que $(PRODUCT_NAME) acesse a sua câmera.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,7 +50,8 @@
         }
       ],
       [
-        "expo-media-library",{
+        "expo-media-library",
+        {
           "photosPermission": "Permita que $(PRODUCT_NAME) acesse suas mídias",
           "savePhotosPermission": "Permita que $(PRODUCT_NAME) salve fotos",
           "isAccessMediaLocationEnabled": true
@@ -52,6 +69,17 @@
           "locationAlwaysAndWhenInUsePermission": "Permita que $(PRODUCT_NAME) use sua localização."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "495621bc-4226-4238-93dd-68882285cce9"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/495621bc-4226-4238-93dd-68882285cce9"
+    }
   }
 }
