@@ -29,7 +29,8 @@ export function Cadastro({ navigation }: LoginTypes) {
     async function handleRegister() {
         try {
             setIsLoading(true)
-            if(data?.name && data?.email && data?.telefone && data?.aniversario && data?.genero && data?.password) {
+
+            if(data?.name && data?.email && data?.telefone && data?.genero && data?.password) {
                 const response = await apiUser.register(data)
                 Alert.alert(`${response.data.name} cadastrado(a)!!`)
                 navigation.navigate('Login')
@@ -118,13 +119,14 @@ export function Cadastro({ navigation }: LoginTypes) {
                         </View>
 
                         <View style={styles.panel} /* Gênero */>
-                            <KeyboardAvoidingView>
                                 <View style={styles.ladinho}>
                                     <Ionicons name="ios-people-circle" style={styles.icon} />
                                     <Picker 
                                     selectedValue={selectedGender}
                                     onValueChange={(itemValue, itemIndex) =>
-                                    setSelectedGender(itemValue)
+                                    {setSelectedGender(itemValue)
+                                        handleChange({ genero: String(itemValue)})
+                                        }
                                     }
                                     style={styles.ladoALado}>
                                         <Picker.Item label="Feminino" value="feminino" />
@@ -132,7 +134,6 @@ export function Cadastro({ navigation }: LoginTypes) {
                                         <Picker.Item label="Outros" value="indefinido" />
                                     </Picker>
                                 </View>
-                            </KeyboardAvoidingView>
                         </View>
 
                         <View style={styles.panel} /* Senha */>
@@ -154,23 +155,6 @@ export function Cadastro({ navigation }: LoginTypes) {
                             </KeyboardAvoidingView>
                         </View>
 
-                        <View style={styles.panel} /* Confirmação de Senha */>
-                            <KeyboardAvoidingView>
-                                <View style={styles.ladinho}>
-                                    <Ionicons name="md-key-outline" size={24} style={styles.icon} />
-                                    <TextInput
-                                        placeholder="Confirme sua senha"
-                                        placeholderTextColor={colors.cinza}
-                                        secureTextEntry={true}
-                                        autoCapitalize="none"
-                                        style={styles.textoCaixa}
-                                    />
-                                    <TouchableOpacity onPress={() => { }} style={styles.olho}>
-                                        <Entypo name="eye-with-line" size={24} color={colors.secondary} />
-                                    </TouchableOpacity>
-                                </View>
-                            </KeyboardAvoidingView>
-                        </View>
                         <View>
                             
                         </View>

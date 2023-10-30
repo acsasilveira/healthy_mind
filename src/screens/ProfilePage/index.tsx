@@ -60,7 +60,7 @@ export function Perfil({ navigation }: LoginTypes) {
             </View>
             <View /* Logout */>
                 <View style={{margin: 20}}>
-                    <TouchableOpacity onPress={signOut}>
+                    <TouchableOpacity onPress={() => signOut()}>
                         <AntDesign name="logout" size={30} color={colors.secondary}/>
                     </TouchableOpacity>
                 </View>
