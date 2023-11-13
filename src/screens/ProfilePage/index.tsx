@@ -11,7 +11,7 @@ import { useAuth } from '../../hooks/auth';
 
 export function Perfil({ navigation }: LoginTypes) {
     const [selectedValue, setSelectedValue] = useState("Selecione uma opção");
-    const {signOut} = useAuth();
+    const {signOut,user} = useAuth();
     return (
         <View style={styles.container}>
             <ComponentLogo />
@@ -27,35 +27,31 @@ export function Perfil({ navigation }: LoginTypes) {
             <View style={styles.panelDados} /* Nome */>
                 <View style={styles.ladinho}>
                     <Ionicons name="person-circle" size={30} color={colors.white} />
-                    <Text style={styles.texto}>ACSA SILVEIRA</Text>
+                    <Text style={styles.texto}>{user?.user.nome}</Text>
                 </View>
             </View>
             <View style={styles.panelDados} /* Gênero */>
                 <View style={styles.ladinho}>
                     <Ionicons name="ios-people-circle" size={30} color={colors.white}/>
-                    <Picker>
-                            <Picker.Item label="Feminino" value="feminino" />
-                            <Picker.Item label="Masculino" value="masculino" />
-                            <Picker.Item label="Outros" value="indefinido" />
-                    </Picker>
+                    <Text style={styles.texto}>{user?.user.genero}</Text>
                 </View>
             </View>
             <View style={styles.panelDados} /* Email */>
                 <View style={styles.ladinho}>
                     <MaterialIcons name="email" size={30} color={colors.white}/>
-                    <Text style={styles.texto}>acsa.silveiras@gmail.com</Text>
+                    <Text style={styles.texto}>{user?.user.email}</Text>
                 </View>
             </View>
             <View style={styles.panelDados} /* Telefone */>
                 <View style={styles.ladinho}>
                     <Feather name="phone" size={30} color={colors.white}/>
-                    <Text style={styles.texto}>(35)98804-9236</Text>
+                    <Text style={styles.texto}>{user?.user.telefone}</Text>
                 </View>
             </View>
             <View style={styles.panelDados} /* Aniversário */>
                 <View style={styles.ladinho}>
                     <FontAwesome name="birthday-cake" size={30} color={colors.white}/>
-                    <Text style={styles.texto}>15/12/2005</Text>
+                    <Text style={styles.texto}>{user?.user.aniversario}</Text>
                 </View>
             </View>
             <View /* Logout */>

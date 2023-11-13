@@ -37,7 +37,8 @@
         "android.permission.ACCESS_COARSE_LOCATION",
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE"
-      ]
+      ],
+      "package": "com.acsa_silveira.HealthyMind"
     },
     "web": {
       "favicon": "./assets/favicon.png"

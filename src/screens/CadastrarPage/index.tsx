@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, TouchableOpacity, Image, KeyboardAvoidingView, Alert, ScrollView } from "react-native";
-import { MaterialIcons, Ionicons, Entypo, Feather } from '@expo/vector-icons'
+import { MaterialIcons, Ionicons, Entypo, Feather, FontAwesome } from '@expo/vector-icons'
 import { TextInput } from 'react-native-gesture-handler';
 import {
     ComponentLogo, ComponentTitle, ComponentButton, ComponentLoading
@@ -30,9 +30,9 @@ export function Cadastro({ navigation }: LoginTypes) {
         try {
             setIsLoading(true)
 
-            if(data?.name && data?.email && data?.telefone && data?.genero && data?.password) {
+            if(data?.nome && data?.email && data?.telefone && data?.genero && data?.aniversario && data?.password) {
                 const response = await apiUser.register(data)
-                Alert.alert(`${response.data.name} cadastrado(a)!!`)
+                Alert.alert(`${response.data.nome} cadastrado(a)!!`)
                 navigation.navigate('Login')
             } else {
                 Alert.alert(`Você não preencheu todos os campos!`)
@@ -40,6 +40,8 @@ export function Cadastro({ navigation }: LoginTypes) {
         } catch (error) {
             const err = error as AxiosError
             const errData = err.response?.data as IErrorApi
+            console.log(errData);
+            console.log(err);
             let message = ""
             if(errData) {
                 for (const iterator of errData.errors){
@@ -78,7 +80,7 @@ export function Cadastro({ navigation }: LoginTypes) {
                                     <Ionicons name="person-circle" style={styles.icon} />
                                     <TextInput
                                         placeholder="Nome"
-                                        onChangeText={(i) => handleChange({ name: i })}
+                                        onChangeText={(i) => handleChange({ nome: i })}
                                         placeholderTextColor={colors.cinza}
                                         autoCapitalize="none"
                                         style={styles.textoCaixa}
@@ -108,10 +110,27 @@ export function Cadastro({ navigation }: LoginTypes) {
                                 <View style={styles.ladinho}>
                                     <Feather name="phone" style={styles.icon} />
                                     <TextInput
-                                        placeholder="Telefone"
+                                        placeholder="99999-9999"
                                         onChangeText={(i) => handleChange({ telefone: i })}
                                         placeholderTextColor={colors.cinza}
                                         autoCapitalize="none"
+                                        keyboardType="decimal-pad"
+                                        style={styles.textoCaixa}
+                                    />
+                                </View>
+                            </KeyboardAvoidingView>
+                        </View>
+
+                        <View style={styles.panel} /* Aniversário */>
+                            <KeyboardAvoidingView>
+                                <View style={styles.ladinho}>
+                                    <FontAwesome name="birthday-cake" style={styles.icon}/>
+                                    <TextInput
+                                        placeholder="01/01/2000"
+                                        onChangeText={(i) => handleChange({ aniversario: i })}
+                                        placeholderTextColor={colors.cinza}
+                                        autoCapitalize="none"
+                                        keyboardType="name-phone-pad"
                                         style={styles.textoCaixa}
                                     />
                                 </View>

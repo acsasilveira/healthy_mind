@@ -1,7 +1,7 @@
 import {api} from "../../api";
 
 export interface IRegister {
-    name?: string
+    nome?: string
     email?: string
     telefone?: string
     genero?: string
@@ -17,7 +17,7 @@ export interface IAuthenticate {
 export interface IUser {
     token: any;
     id: number
-    name: string
+    nome: string
     email: string
     telefone: string
     genero: string
