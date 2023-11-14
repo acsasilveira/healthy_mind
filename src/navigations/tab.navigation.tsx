@@ -1,11 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { ScreenPerfil, ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLocation, ScreenCalendar} from "../screens";
+import { ScreenPerfil, ScreenHome, ScreenAnsiedade, ScreenEstresse, ScreenDesabafo, ScreenLocation, ScreenCalendar, ScreenCarro} from "../screens";
 import { colors } from '../styles/colors';
 import { Image, StyleSheet } from 'react-native';
 import { Ionicons, Entypo, AntDesign, FontAwesome5, Feather, FontAwesome } from '@expo/vector-icons';
-import { styles } from '../components/Logo/styles';
-import { color } from 'react-native-reanimated';
 
 type TabParamList = {
   Perfil: undefined
@@ -14,7 +12,7 @@ type TabParamList = {
   Estresse: undefined
   Desabafo: undefined
   Camera: undefined
-  
+  Carrinho: undefined  
 };
 
 type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, 'Perfil' >
@@ -64,7 +62,14 @@ export function TabNavigation() {
       <Tab.Screen name="Calendario" component={ScreenCalendar} options={{
         // Ícone do Perfil
         tabBarIcon: () => (
-          <FontAwesome name="calendar" color="white" size={45} />
+          <AntDesign name="calendar" color="white" size={45} />
+        ),
+        tabBarShowLabel: false
+      }}/>
+      <Tab.Screen name="Carrinho" component={ScreenCarro} options={{
+        // Ícone do Perfil
+        tabBarIcon: () => (
+          <Ionicons name="game-controller" color="white" size={25} />
         ),
         tabBarShowLabel: false
       }}/>

@@ -9,6 +9,7 @@ export { SCamera as ScreenCamera} from "./CameraPage";
 export { SPhoto as ScreenPhoto } from "./PhotoPage";
 export { SLocation as ScreenLocation} from "./LocationPage";
 export { Calendario as ScreenCalendar } from "./CalendarPage";
+export { Acelerometro as ScreenCarro} from "./Acelerometro";
 export { Metas as ScreenMetas } from "./MetasPage";
 export { AddMeta as ScreenAddMeta } from "./AddMetaPage";
 export { EditMeta as ScreenEditMeta } from "./EditMetaPage";

@@ -2,14 +2,12 @@ import React from 'react';
 import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
 import { ScreenLogin, ScreenCadastro, ScreenCamera, ScreenPerfil, ScreenPhoto, ScreenMetas, ScreenAddMeta, ScreenLocation, ScreenEditProfile, ScreenEditDesabafo, ScreenEditMeta } from "../screens";
 import { TabNavigation } from "./tab.navigation";
-import { DrawerNavigation } from "./drawer.navigation";
 
 type LoginStackParamList = {
   // Define os parâmetros desse tipo de navigation
   Login: undefined
   Cadastrar: undefined
   Tab: undefined
-  Drawer: undefined
   CameraTake: undefined
   Perfil: undefined
   EditPerfil: undefined
@@ -34,7 +32,6 @@ export function LoginNavigation() {
       <Stack.Screen name="Login" component={ScreenLogin} />
       <Stack.Screen name="Cadastrar" component={ScreenCadastro} />
       <Stack.Screen name="Tab" component={TabNavigation} />
-      <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="Photo" component={ScreenPhoto} />
       <Stack.Screen name="CameraTake" component={ScreenCamera} />
       <Stack.Screen name="Perfil" component={ScreenPerfil} />
