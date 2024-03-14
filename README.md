@@ -29,8 +29,6 @@
 
 ✉  | acsa.silveiras@gmail.com
 
-💬 | <a href="https://join.skype.com/invite/xqwYc65uiQMD">acsa_silveira</a> (Skype)
-
 #
 
 <h3> LINGUAGENS UTILIZADAS </h3>
